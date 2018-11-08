@@ -1,0 +1,1 @@
+#reviews-widget .dashboard-items .dashboard-item{padding:.75rem}#reviews-widget .star-container{display:inline-block}#reviews-widget star{font-size:1rem;padding:0 .1rem}#reviews-widget star:before{content:'\f006';font-family:'FontAwesome'}#reviews-widget star.active:before{content:'\f005'}#reviews-widget p{margin:.75em 0}

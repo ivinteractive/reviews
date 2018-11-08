@@ -1,0 +1,28 @@
+#reviews-widget {
+
+	.dashboard-items .dashboard-item {
+		padding: .75rem;
+	}
+
+	.star-container {
+		display: inline-block;
+	}
+
+	star {
+		font-size: 1rem;
+		padding: 0 .1rem;
+
+		&:before {
+			content: '\f006';
+			font-family: 'FontAwesome';
+		}
+		&.active {
+			&:before {
+				content: '\f005';
+			}
+		}
+	}
+	p {
+		margin: 0.75em 0 0.75em;
+	}
+}
