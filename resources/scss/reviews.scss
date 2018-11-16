@@ -32,7 +32,7 @@ body#reviews {
 	form {
 		background: #fff;
 		text-align: center;
-		padding: 5rem;
+		padding: 3rem 5rem 1.5rem;
 		margin: 0 auto;
 	    border: 1px solid #eee;
 	}
@@ -47,7 +47,7 @@ body#reviews {
 }
 
 header {
-	margin: 0 0 3rem;
+	margin: 0;
 }
 
 main {
@@ -59,12 +59,96 @@ main {
 	}
 }
 
-#reviews h1 {
-	margin: 0 1rem 1rem;
+#hero {
+	a {
+		display: block;
+	}
+	img {
+		display: block;
+	}
+}
 
-	@media screen and ($xs) {
-		font-size: 1.75rem;
+#wrapper {
+	margin-bottom: 2.6875rem;
+}
+
+#reviews {
+	h1 {
 		margin: 0 0 1rem;
+		font-size: 2.75rem;
+
+		&.error {
+			color: #DD0000;
+			text-align: center;
+		}
+
+		@media screen and ($xs) {
+			font-size: 1.75rem;
+			margin: 0 0 1rem;
+		}
+	}
+	h2 {
+		color: #797979;
+		font-weight: 300;
+		line-height: 1.25;
+		margin-bottom: 3.0625rem;
+	}
+}
+
+#_submit {
+	margin-bottom: 2rem;
+}
+
+.review-buttons {
+	margin-bottom: 2.625rem;
+	display: flex;
+	justify-content: space-between;
+	a, button {
+		border-radius: 0;
+		text-transform: capitalize;
+		// font-size: 1.0625rem;
+		font-size: 0.895rem;
+		font-weight: 600;
+		border: 0.0625rem solid;
+		padding: 0.75rem 1.75rem;
+		display: inline-block;
+		text-decoration: none;
+		transition: background-color .25s, color .5s;
+		span {
+			border-bottom: 0.0625rem solid;
+		}
+		&.green {
+			color: #4AA922;
+			border-color: rgba(74,169,34,0.65);
+			background-color: rgba(74,169,34,0.05);
+			&:hover {
+				background-color: #4AA922;
+				color: #FFFFFF;
+			}
+		}
+		&.red {
+			color: #C7363B;
+			border-color: rgba(199,54,59,0.65);
+			background-color: rgba(199,54,59,0.05);
+			&:hover {
+				background-color: #C7363B;
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+#external-review-link {
+	border-radius: 0;
+	background-color: #4E86FA;
+	margin-bottom: 2.8125rem;
+	border-bottom: 0.125rem solid #286BD1;
+	font-size: 1.125rem;
+	text-transform: capitalize;
+	font-weight: 600;
+	padding: 0.65rem 2rem;
+	span {
+		border-bottom: 0.0625rem solid #FFFFFF;
 	}
 }
 
@@ -148,7 +232,7 @@ button, .button {
 
     &:hover {
     	background-color: #27ae60;
-    } 
+    }
 }
 
 .button {

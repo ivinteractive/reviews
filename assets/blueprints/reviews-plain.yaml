@@ -12,10 +12,9 @@ options:
 
 fields:
 
-  tabContent:
+  content_info:
     label: Content
-    type:  tabs
-    icon: file-text-o
+    type:  info
   title:
     label: Title
     type: text
@@ -33,38 +32,32 @@ fields:
     type: text
   text:
     label: Text
-    type: markdown
+    type: textarea
     required: true
   high_text:
     label: High Rating Text
-    type: markdown
+    type: textarea
     required: true
   low_text:
     label: Low Rating Text
-    type: markdown
+    type: textarea
     required: true
   success_text:
     label: Success Text
-    type: markdown
+    type: textarea
     required: true
 
-  tabEmail:
+  email_line:
+    type: line
+  email_info:
     label: Email
-    type:  tabs
-    icon: envelope-o
+    type:  info
   email_company:
     label: Company Name
     type: text
   email_text:
     label: Text
-    type: markdown
-  email_type:
-    label: Email Type
-    type: select
-    options:
-      stars: 'Stars (links to stars page)'
-      skip: 'Skip (skips directly to feedback form/review page)'
-    default: stars
+    type: textarea
   reveiw_button_color:
     label: Review Button Color
     type: Text
@@ -78,12 +71,13 @@ fields:
     width: 1/2
   email_footer:
     label: Footer Text
-    type: markdown
+    type: textarea
 
-  tabConfig:
+  config_line:
+    type: line
+  config_info:
     label: Configuration
-    type:  tabs
-    icon: gear
+    type:  info
   min_rating:
     label: Minimum Rating
     type: select
@@ -116,4 +110,4 @@ fields:
     width: 1/2
   footer_text:
     label: Footer Text
-    type: markdown
+    type: textarea

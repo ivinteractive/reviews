@@ -1,0 +1,86 @@
+title: Reviews Config
+
+pages: true
+
+options:
+  preview: false
+  delete: false
+  deletable: false
+  template: false
+  status: false
+  hide: true
+
+fields:
+
+  tabConfig:
+    label: Configuration
+    type:  tabs
+    icon: gear
+  hero:
+    label: Default Hero Image (JPG, PNG)
+    type: image
+  hero_border_color:
+    label: Hero Border Color
+    type: text
+  min_rating:
+    label: Minimum Rating
+    type: select
+    required: true
+    options:
+      1: 1
+      2: 2
+      3: 3
+      4: 4
+      5: 5
+  review_links:
+    label: Third Party Review Links
+    type: structure
+    style: table
+    fields:
+      link_id:
+        label: Public ID
+        type: text
+        required: true
+      name:
+        label: Review Name
+        type: text
+        icon: font
+        required: true
+      link:
+        label: Review Link
+        type: url
+        icon: link
+        required: true
+      location:
+        label: Location
+        type: text
+      provider:
+        label: Provider
+        type: text
+      default_link:
+        label: Default Link
+        type: checkbox
+        text: 'Use this as the default link'
+  logo:
+    label: Logo (JPG, PNG)
+    type: image
+  button_color:
+    label: Button Color
+    type: text
+    width: 1/2
+  button_hover:
+    label: Button Hover Color
+    type: text
+    width: 1/2
+  icon_color:
+    label: Icon Color
+    type: text
+    width: 1/2
+  star_use:
+    label: Use this color for stars?
+    type: checkbox
+    text: 'Yes'
+    width: 1/2
+  footer_text:
+    label: Footer Text
+    type: markdown
