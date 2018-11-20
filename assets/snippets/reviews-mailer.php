@@ -108,7 +108,6 @@
                 <td style="max-width:16px" width="16">&nbsp;</td>
               </tr>
             <?php endif; ?>
-            </tr>
             <tr style="background-color:#FFFFFF;">
               <?= clearSpace(false, 20); ?>
               <td style="max-width: 475px"><?= $page->email_text()->kt() ?></td>
@@ -124,24 +123,26 @@
         </table>
       </td>
     </tr>
+
+    <?php /**FOOTER**/ ?>
     <tr>
       <td colspan="3" height="45" style="line-height:45px;font-size:45px;"></td>
     </tr>
     <tr>
-      <td></td>
+      <td style="max-width:16px" width="16">&nbsp;</td>
       <td class="footer">
         <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
         <span style="color:#999999!important;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span style="color:#999999!important;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
-      <td></td>
+      <td style="max-width:16px" width="16">&nbsp;</td>
     </tr>
     <tr>
-      <td></td>
+      <td style="max-width:16px" width="16">&nbsp;</td>
       <td class="footer">
         <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_footer_address()->kt() ?></span>
       </td>
-      <td></td>
+      <td style="max-width:16px" width="16">&nbsp;</td>
     </tr>
     <tr>
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
