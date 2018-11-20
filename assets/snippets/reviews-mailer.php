@@ -41,7 +41,7 @@
   <tbody>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
     <tr>
-      <td width="100%" colspan="3">
+      <td width="100%" colspan="3" style="line-height:0;">
         <a href="<?= url() ?>"><?= $hero ?></a>
       </td>
     </tr>
@@ -50,27 +50,32 @@
     </tr>
     <tr>
       <td colspan="3" style="background-color: #FFFFFF; border: 1px solid #EEEEEE;">
-        <table align="center" width="100%">
+        <table align="center" width="100%" bgcolor="#FFFFFF">
           <tbody>
             <tr><?= clearSpace(3, false, 65, true); ?></tr>
             <tr>
-              <td colspan="3">
+              <td></td>
+              <td>
                 <h1<?= $page?'':' class="error"'?> style="font-size:2.5rem;font-family:'Source Sans Pro',sans-serif">
                   <?= $page?$page->review_title()->value():'Page template is empty'; ?>
                 </h1>
               </td>
+              <td></td>
             </tr>
             <tr>
-              <td colspan="3">
+              <td></td>
+              <td>
                 <?= $page?'<h2 style="font-size:1.4rem;font-family:\'Source Sans Pro\',sans-serif;color:#797979;font-weight:300;line-height:1.25;">'.$page->review_subtitle()->value().'</h2>':''; ?>
               </td>
+              <td></td>
             </tr>
             <?php if($page->email_type()->value() === 'skip'): ?>
               <tr>
                 <?= clearSpace(false, false, 40, false); ?>
               </tr>
               <tr>
-                <td colspan="3">
+                <td></td>
+                <td>
                   <table align="center" width="100%">
                     <tbody>
                       <tr>
@@ -89,15 +94,18 @@
                     </tbody>
                   </table>
                 </td>
+                <td></td>
               </tr>
               <tr>
                 <?= clearSpace(false, false, 20, false); ?>
               </tr>
             <?php else: ?>
               <tr>
-                <td colspan="3">
+                <td></td>
+                <td>
                   <?= buttonTag('Leave us a review',$page->url(),$page->reveiw_button_color()->isNotEmpty()?$page->reveiw_button_color()->value():false) ?>
                 </td>
+                <td></td>
               </tr>
             <?php endif; ?>
             </tr>
@@ -120,16 +128,20 @@
       <td colspan="3" height="45" style="line-height:45px;font-size:45px;"></td>
     </tr>
     <tr>
-      <td colspan="3" class="footer">
+      <td></td>
+      <td class="footer">
         <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
         <span style="color:#999999!important;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span style="color:#999999!important;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
+      <td></td>
     </tr>
     <tr>
-      <td colspan="3" class="footer">
+      <td></td>
+      <td class="footer">
         <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_footer_address()->kt() ?></span>
       </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
@@ -160,9 +172,11 @@
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
     </tr>
     <tr>
-      <td colspan="3" style="color: #999999 !important;font-size:0.65rem" class="footer">
+      <td></td>
+      <td style="color: #999999 !important;font-size:0.65rem" class="footer">
         This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.
       </td>
+      <td></td>
     </tr>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
   </tbody>
