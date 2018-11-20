@@ -285,11 +285,29 @@ star {
 }
 
 footer {
-	color: #999;
+	color: #999999;
 	text-align: center;
-	margin-top: 5rem;
-	padding-top: 2rem;
-	border-top: 1px solid #eee;
+	margin-top: 3rem;
+
+	font-size: 0.75rem;
+	.footer-text {
+		margin-bottom: 1.25rem;
+	}
+	.iv-logo {
+		color: #D7D7D7;
+		padding: 0.5rem 0;
+		margin-bottom: 1rem;
+		span {
+			position: relative;
+			&::before {
+				content: url('/site/plugins/reviews/assets/images/iv-logo-email.png');
+				position: absolute;
+				top: 50%;
+				left: -1.25rem;
+				transform: translateY(-50%);
+			}
+		}
+	}
 
 	@media screen and ($xs) {
 		margin-top: 3rem;

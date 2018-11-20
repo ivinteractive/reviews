@@ -1,10 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Leave a Review</title>
-  <style><?= file_get_contents(__DIR__ . DS . '..' . DS . 'css' . DS . 'email.css') ?></style>
-  <?= $customCss ?>
-</head>
+<title>Leave a Review</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style><?= file_get_contents(__DIR__ . DS . '..' . DS . 'css' . DS . 'email.css') ?></style>
+<?= $customCss ?>
+<style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+    p {margin:0;}
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+    div[style*="margin: 16px 0;"] { margin: 0 !important; }
+
+    /* WEB FONTS */
+    @media screen {
+
+    }
+
+    /* MOBILE STYLES WHERE SUPPORTED */
+    @media screen and (max-width: 600px) {
+
+    }
+</style>
+
 <body>
 <table width="100%" align="center" style="max-width: 616px">
   <tbody>
@@ -44,13 +75,13 @@
                     <tbody>
                       <tr>
                         <td align="right">
-                          <a href="<?= $page->url().'/leave-a-review' ?>">
+                          <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]">
                             <img src="<?= url() ?>/site/plugins/reviews/assets/images/email-button-green.png" alt="I liked it. Thank you.">
                           </a>
                         </td>
                         <td width="35"></td>
                         <td align="left">
-                          <a href="<?= $page->url().'/feedback' ?>">
+                          <a href="<?= $page->url()?>/feedback">
                             <img src="<?= url() ?>/site/plugins/reviews/assets/images/email-button-red.png" alt="It Could've Been Better.">
                           </a>
                         </td>
@@ -86,26 +117,51 @@
       </td>
     </tr>
     <tr>
-      <td colspan="3" height="80" style="line-height: 80px; font-size: 80px; border-bottom: 1px solid #EEEEEE;"></td>
+      <td colspan="3" height="45" style="line-height:45px;font-size:45px;"></td>
     </tr>
     <tr>
-      <td colspan="3" height="100" style="color: #999999;" class="footer"><forwardtoafriend>Forward to a Friend</forwardtoafriend></td>
-    </tr>
-    <tr>
-      <td width="203" style="color: #999999;"><?= $page->email_company()->value() ?></td>
-      <td width="203" style="border-left: 1px solid #BCBCBC; border-right: 1px solid #BCBCBC;" class="footer">
-        <a href="<?= url() ?>" style="color: #999999!important;">Visit our Website</a>
-      </td>
-      <td width="203" class="footer">
-        <a href="<?= $page->social_link()->value() ?>" style="color: #999999!important;"><?= $page->email_social()->value() ?></a>
+      <td colspan="3" class="footer">
+        <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
+        <span style="color:#999999!important;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span style="color:#999999!important;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
     </tr>
     <tr>
-      <td colspan="3" style="color: #999999;" class="footer"><?= $page->email_footer()->kt() ?></td>
+      <td colspan="3" class="footer">
+        <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_footer_address()->kt() ?></span>
+      </td>
     </tr>
     <tr>
-      <td colspan="3" height="65" style="color: #999999 !important;" class="footer">
-        <unsubscribe>Unsubscribe</unsubscribe>
+      <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
+    </tr>
+    <tr>
+      <td colspan="3" style="color:#D7D7D7!important;font-size:0.65rem;" class="footer">
+        <table align="center" width="100%">
+          <tbody>
+            <tr>
+              <td></td>
+              <td>
+                <table align="center">
+                  <tbody>
+                    <tr style="color:#D7D7D7!important;font-size:0.65rem;">
+                      <td><img src="<?= url() ?>/site/plugins/reviews/assets/images/iv-logo-email.png" alt="IV Interactive Logo"></td>
+                      <td>&nbsp;&nbsp;Powered by <a href="https://www.ivinteractive.com/" style="color:#D7D7D7!important;">IV Interactive</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
+    </tr>
+    <tr>
+      <td colspan="3" style="color: #999999 !important;font-size:0.65rem" class="footer">
+        This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.
       </td>
     </tr>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>

@@ -61,16 +61,16 @@ fields:
   reveiw_button_color:
     label: Review Button Color
     type: Text
-  email_social:
-    label: Social Media Text
+  contact_text:
+    label: Contact Link Text
     type: text
     width: 1/2
-  social_link:
-    label: Social Media Website
+  contact_link:
+    label: Contact Link
     type: url
     width: 1/2
-  email_footer:
-    label: Footer Text
+  email_footer_address:
+    label: Footer Address
     type: textarea
 
   config_line:

@@ -46,6 +46,11 @@ fields:
         type: text
         icon: font
         required: true
+      button_label:
+        label: Button Label
+        type: text
+        icon: font
+        required: true
       link:
         label: Review Link
         type: url

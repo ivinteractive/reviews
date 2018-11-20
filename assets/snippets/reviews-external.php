@@ -8,7 +8,7 @@
       <div id="wrapper">
 
 				<a class="button" id="external-review-link" href="<?= $externalReview->link()->value() ?>" target="_blank" onclick="externalClicked()">
-          <span>Review us on <?= $externalReview->name()->value()?></span>
+          <span>Review us on <?= $externalReview->button_label()->value()?></span>
         </a>
 				<?= $campaign_page->text()->kt(); ?>
 				<input type="hidden" id="link" name="link" value="<?= $externalReview->link()->value() ?>">
@@ -30,4 +30,4 @@
   </div>
 </main>
 
-<?php snippet('reviews-footer', ['campaign_page'=>$campaign_page,'js'=>$js]) ?>
+<?php snippet('reviews-footer', ['page'=>$page,'campaign_page'=>$campaign_page,'js'=>$js]) ?>

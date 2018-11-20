@@ -124,22 +124,21 @@ kirby()->routes([
 					]
 				];
 
+				$required = [
+					'name' => '',
+					'email' => 'email',
+					'comments' => ''
+				];
+
 				$form = ivform('reviews', [
 					'actions' => $actions,
+					'required' => $required,
 					'ignores' => ['/'.url::path()]
 				]);
 
-				$message = null;
-
-				if (!$existingReview) {
-					$message = $rating > $min_rating ? $high_rating : $low_rating;
-				} else {
-					$message = $rating < $min_rating ? $success : null;
-				}
-
 				$return = [
 					'success' => 1,
-					'message'  => $message,
+					'message'  => $success,
 					'high_low' => !$existingReview ? 1 : null,
 					'form' => $form
 				];
@@ -315,7 +314,7 @@ kirby()->routes([
   ],
 
   [
-    'pattern' => c::get('reviews-uri', 'reviews').'/(:any)/review',
+    'pattern' => c::get('reviews-uri', 'reviews').'/(:any)/leave-a-review',
     'action'  => function($campaign) use($page, $customCss, $css, $js) {
       c::set('kirbytext.snippets.post',[
         '{' => '[',
@@ -324,10 +323,14 @@ kirby()->routes([
 
       $campaign_page = page(c::get('reviews-uri', 'reviews').'/'.$campaign);
 
-      foreach($page->review_links()->toStructure() as $reviewLink) {
-        if($reviewLink->link_id()->value() == get('link_id') || ($reviewLink->default_link()->isTrue() && !get('link_id'))) {
+			$review_links = $page->review_links()->toStructure();
+
+      foreach($review_links as $reviewLink) {
+        if($reviewLink->link_id()->value() === get('link_id') || ($reviewLink->default_link()->isTrue() && !get('link_id'))) {
           $externalReview = $reviewLink;
-        }
+        } elseif($reviewLink->default_link()->isTrue() && !isset($externalReview)) {
+					$externalReview = $reviewLink;
+				}
       }
 
       $customCss = customCss($page, $campaign_page);
