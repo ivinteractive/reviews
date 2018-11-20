@@ -52,29 +52,29 @@
       <td colspan="3" style="background-color: #FFFFFF; border: 1px solid #EEEEEE;">
         <table align="center" width="100%" bgcolor="#FFFFFF">
           <tbody>
-            <tr><?= clearSpace(3, false, 65, true); ?></tr>
-            <tr>
-              <td></td>
+            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
+            <tr style="background-color:#FFFFFF;">
+              <td style="max-width:16px" width="16">&nbsp;</td>
               <td>
                 <h1<?= $page?'':' class="error"'?> style="font-size:2.5rem;font-family:'Source Sans Pro',sans-serif">
                   <?= $page?$page->review_title()->value():'Page template is empty'; ?>
                 </h1>
               </td>
-              <td></td>
+              <td style="max-width:16px" width="16">&nbsp;</td>
             </tr>
-            <tr>
-              <td></td>
+            <tr style="background-color:#FFFFFF;">
+              <td style="max-width:16px" width="16"></td>
               <td>
                 <?= $page?'<h2 style="font-size:1.4rem;font-family:\'Source Sans Pro\',sans-serif;color:#797979;font-weight:300;line-height:1.25;">'.$page->review_subtitle()->value().'</h2>':''; ?>
               </td>
-              <td></td>
+              <td style="max-width:16px" width="16">&nbsp;</td>
             </tr>
             <?php if($page->email_type()->value() === 'skip'): ?>
-              <tr>
+              <tr style="background-color:#FFFFFF;">
                 <?= clearSpace(false, false, 40, false); ?>
               </tr>
-              <tr>
-                <td></td>
+              <tr style="background-color:#FFFFFF;">
+                <td style="max-width:16px" width="16">&nbsp;</td>
                 <td>
                   <table align="center" width="100%">
                     <tbody>
@@ -94,28 +94,28 @@
                     </tbody>
                   </table>
                 </td>
-                <td></td>
+                <td style="max-width:16px" width="16">&nbsp;</td>
               </tr>
-              <tr>
+              <tr style="background-color:#FFFFFF;">
                 <?= clearSpace(false, false, 20, false); ?>
               </tr>
             <?php else: ?>
-              <tr>
-                <td></td>
+              <tr style="background-color:#FFFFFF;">
+                <td style="max-width:16px" width="16">&nbsp;</td>
                 <td>
                   <?= buttonTag('Leave us a review',$page->url(),$page->reveiw_button_color()->isNotEmpty()?$page->reveiw_button_color()->value():false) ?>
                 </td>
-                <td></td>
+                <td style="max-width:16px" width="16">&nbsp;</td>
               </tr>
             <?php endif; ?>
             </tr>
-            <tr>
+            <tr style="background-color:#FFFFFF;">
               <?= clearSpace(false, 20); ?>
               <td style="max-width: 475px"><?= $page->email_text()->kt() ?></td>
               <?= clearSpace(false, 20); ?>
             </tr>
-            <tr><?= clearSpace(3, false, 80, true); ?></tr>
-            <tr>
+            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 80, true); ?></tr>
+            <tr style="background-color:#FFFFFF;">
               <td colspan="3">
                 <a href="<?= url() ?>"><?= $logo ?></a>
               </td>
@@ -172,11 +172,19 @@
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
     </tr>
     <tr>
-      <td></td>
-      <td style="color: #999999 !important;font-size:0.65rem" class="footer">
-        This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.
+      <td style="max-width:16px" width="16">&nbsp;</td>
+      <td class="footer">
+        <table align="center" style="max-width:616px;color:#999999!important;font-size:0.65rem">
+          <tbody>
+            <tr>
+              <td>
+                This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </td>
-      <td></td>
+      <td style="max-width:16px" width="16">&nbsp;</td>
     </tr>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
   </tbody>
