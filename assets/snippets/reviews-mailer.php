@@ -37,7 +37,7 @@
 </style>
 
 <body>
-<table width="100%" align="center" style="max-width: 616px">
+<table width="616" align="center" style="max-width: 616px">
   <tbody>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
     <tr>
@@ -175,7 +175,7 @@
     <tr>
       <td style="max-width:16px" width="16">&nbsp;</td>
       <td class="footer">
-        <table align="center" style="max-width:616px;color:#999999!important;font-size:0.65rem">
+        <table align="center" width="616" style="max-width:616px;color:#999999!important;font-size:0.65rem">
           <tbody>
             <tr>
               <td>
