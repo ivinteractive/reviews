@@ -132,16 +132,16 @@
     <tr>
       <td style="max-width:16px" width="16">&nbsp;</td>
       <td class="footer">
-        <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
-        <span style="color:#999999!important;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-        <span style="color:#999999!important;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
+        <span style="color:#999999;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
+        <span style="color:#999999;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span style="color:#999999;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
       <td style="max-width:16px" width="16">&nbsp;</td>
     </tr>
     <tr>
       <td style="max-width:16px" width="16">&nbsp;</td>
       <td class="footer">
-        <span style="color:#999999!important;font-size:0.65rem;"><?= $page->email_footer_address()->kt() ?></span>
+        <span style="color:#999999;font-size:0.65rem;"><?= $page->email_footer_address()->kt() ?></span>
       </td>
       <td style="max-width:16px" width="16">&nbsp;</td>
     </tr>
@@ -149,7 +149,7 @@
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
     </tr>
     <tr>
-      <td colspan="3" style="color:#D7D7D7!important;font-size:0.65rem;" class="footer">
+      <td colspan="3" style="color:#D7D7D7;font-size:0.65rem;" class="footer">
         <table align="center" width="100%">
           <tbody>
             <tr>
@@ -157,9 +157,9 @@
               <td>
                 <table align="center">
                   <tbody>
-                    <tr style="color:#D7D7D7!important;font-size:0.65rem;">
-                      <td><img src="<?= url() ?>/site/plugins/reviews/assets/images/ivi-logo.png" alt="IV Interactive Logo" width="16"></td>
-                      <td>&nbsp;&nbsp;Powered by <a href="https://www.ivinteractive.com/" style="color:#D7D7D7!important;">IV Interactive</a></td>
+                    <tr style="color:#D7D7D7;font-size:0.65rem;">
+                      <td style="color:#D7D7D7;font-size:0.65rem;"><img src="<?= url() ?>/site/plugins/reviews/assets/images/ivi-logo.png" alt="IV Interactive Logo" width="16"></td>
+                      <td style="color:#D7D7D7;font-size:0.65rem;">&nbsp;&nbsp;Powered by <a href="https://www.ivinteractive.com/" style="color:#D7D7D7!important;">IV Interactive</a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -176,11 +176,11 @@
     <tr>
       <td style="max-width:16px" width="16">&nbsp;</td>
       <td class="footer">
-        <table align="center" width="616" style="max-width:616px;color:#999999!important;font-size:0.65rem">
+        <table align="center" width="616" style="max-width:616px;color:#999999;font-size:0.65rem">
           <tbody>
             <tr>
               <td>
-                This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.
+                <span style="color:#999999;font-size:0.65rem">This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.</span>
               </td>
             </tr>
           </tbody>
