@@ -119,6 +119,7 @@
                 <a href="<?= url() ?>"><?= $logo ?></a>
               </td>
             </tr>
+            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 56, true); ?></tr>
           </tbody>
         </table>
       </td>
@@ -157,7 +158,7 @@
                 <table align="center">
                   <tbody>
                     <tr style="color:#D7D7D7!important;font-size:0.65rem;">
-                      <td><img src="<?= url() ?>/site/plugins/reviews/assets/images/iv-logo-email.png" alt="IV Interactive Logo"></td>
+                      <td><img src="<?= url() ?>/site/plugins/reviews/assets/images/ivi-logo.png" alt="IV Interactive Logo" width="16"></td>
                       <td>&nbsp;&nbsp;Powered by <a href="https://www.ivinteractive.com/" style="color:#D7D7D7!important;">IV Interactive</a></td>
                     </tr>
                   </tbody>

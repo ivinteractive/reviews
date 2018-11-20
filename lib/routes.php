@@ -20,7 +20,7 @@ kirby()->routes([
 
 			$customCss = customCss($page, $campaign_page);
 
-			$logo = getCampaignImage('logo',$campaign_page,$page);
+			$logo = getCampaignImage('logo',$campaign_page,$page, ['width' => '118', 'alt' => 'Logo','class'=>'campaign-logo']);
 
 			$hero = getCampaignImage('hero',$campaign_page,$page);
 
@@ -52,7 +52,7 @@ kirby()->routes([
 		'pattern' => c::get('reviews-uri', 'reviews'),
 		'action'  => function() use($page, $css, $customCss, $js) {
 
-			$logo = getCampaignImage('logo',$page,$page);
+			$logo = getCampaignImage('logo',$page,$page, ['width' => '118', 'alt' => 'Logo','class'=>'campaign-logo']);
 
 			$hero = getCampaignImage('hero',$page,$page);
 
@@ -262,7 +262,7 @@ kirby()->routes([
 
 			$mailer_values = [
 				'page' => $campaign_page,
-				'logo' => getCampaignImage('logo',$campaign_page,$page),
+				'logo' => getCampaignImage('logo',$campaign_page,$page,['width'=>'118','alt'=>'Logo','class'=>'campaign-logo']),
 				'hero' => getCampaignImage('hero',$campaign_page,$page),
 				'customCss' => $customCss
 			];
@@ -285,7 +285,7 @@ kirby()->routes([
 
 			$customCss = customCss($page, $campaign_page);
 
-			$logo = getCampaignImage('logo',$campaign_page,$page);
+			$logo = getCampaignImage('logo',$campaign_page,$page, ['width' => '118', 'alt' => 'Logo', 'class'=>'campaign-logo']);
 
 			$hero = getCampaignImage('hero',$campaign_page,$page);
 
@@ -335,7 +335,7 @@ kirby()->routes([
 
       $customCss = customCss($page, $campaign_page);
 
-      $logo = getCampaignImage('logo',$campaign_page,$page);
+      $logo = getCampaignImage('logo',$campaign_page,$page, ['width' => '118', 'alt' => 'Logo','class'=>'campaign-logo']);
 
       $hero = getCampaignImage('hero',$campaign_page,$page);
 

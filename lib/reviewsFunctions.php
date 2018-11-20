@@ -81,8 +81,9 @@ function getCampaignField($name, $campaign, $config) {
  * @param  object $config   [The reviews config page]
  * @return object $img      [An image, or false]
  */
-function getCampaignImage($name, $campaign, $config) {
+function getCampaignImage($name, $campaign, $config, $params = false) {
 	$img = false;
+	$attr = '';
 
 	if($campaign) {
 		$image = $campaign->{$name}();
@@ -92,5 +93,15 @@ function getCampaignImage($name, $campaign, $config) {
 		$img = $config?$config->image($image):'';
 	}
 
-	return $img;
+	if($params) {
+		foreach ($params as $key => $param) {
+			$attr.= ' '.$key.'="'.$params[$key].'"';
+		}
+	}
+
+	if($img) {
+		return '<img src="'.$img->url().'"'.$attr.'/>';
+	}
+
+	return false;
 }
