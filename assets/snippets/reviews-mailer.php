@@ -92,18 +92,18 @@
                             <tr>
                               <td>
                                 <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
-                                  <table bgcolor="#FAFDFA" bordercolor="#A9DB94" border="1" align="center" cellpadding="0" cellspacing="0">
-                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                  <table bgcolor="#FAFDFA" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #A9DB94;">
+                                    <tr><td height="14" colspan="3"></td></tr>
                                     <tr>
-                                      <td width="16" style="border:none;"></td>
-                                      <td style="border:none;">
+                                      <td width="16"></td>
+                                      <td>
                                         <span style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
-                                          <span style="display:inline-block;font-size:20px;margin-right:10px;">👍</span>I liked it. Thank you.
+                                          <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.
                                         </span>
                                       </td>
-                                      <td width="16" style="border:none;"></td>
+                                      <td width="16"></td>
                                     </tr>
-                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                    <tr><td height="14" colspan="3"></td></tr>
                                   </table>
                                 </a>
                               </td>
@@ -121,18 +121,18 @@
                             <tr>
                               <td>
                                 <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
-                                  <table bgcolor="#FEF9F9" bordercolor="#E88E93" align="center"  border="1" cellpadding="0" cellspacing="0">
+                                  <table bgcolor="#FEF9F9" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #E88E93;">
                                     <tr><td height="14" colspan="3" style="border:none;"></td></tr>
                                     <tr>
-                                      <td width="16" style="border:none;"></td>
-                                      <td style="border:none;">
+                                      <td width="16"></td>
+                                      <td>
                                         <span style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
                                           <span style="display:inline-block;font-size:20px;">&nbsp;</span>It could've been better.
                                         </span>
                                       </td>
-                                      <td width="16" style="border:none;"></td>
+                                      <td width="16"></td>
                                     </tr>
-                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                    <tr><td height="14" colspan="3"></td></tr>
                                   </table>
                                 </a>
                               </td>
