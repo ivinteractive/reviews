@@ -26,16 +26,15 @@
     div[style*="margin: 16px 0;"] { margin: 0 !important; }
     @media only screen and (min-device-width: 617px) {
       .content {width: 616px !important;}
-      .col290 {width: 290px!important;}
+      .col286 {width: 286px!important;}
     }
     /* WEB FONTS */
     @media screen {
 
     }
-
     /* MOBILE STYLES WHERE SUPPORTED */
     @media screen and (max-width: 600px) {
-
+      .hide-mobile {display: none;}
     }
 </style>
 
@@ -88,12 +87,12 @@
                     <tbody>
                       <tr>
                         <td>
-                          <table width="290" align="left" border="0" cellpadding="0" cellspacing="0">
+                          <table width="286" align="left" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                               <td>
                                 <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
-                                  <table bgcolor="#FAFDFA" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #A9DB94;">
-                                    <tr><td height="14" colspan="3"></td></tr>
+                                  <table bgcolor="#FAFDFA" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #A9DB94;">
+                                    <tr><td height="18" colspan="3"></td></tr>
                                     <tr>
                                       <td width="16"></td>
                                       <td>
@@ -103,28 +102,31 @@
                                       </td>
                                       <td width="16"></td>
                                     </tr>
-                                    <tr><td height="14" colspan="3"></td></tr>
+                                    <tr><td height="18" colspan="3"></td></tr>
                                   </table>
                                 </a>
                               </td>
+                            </tr>
+                            <tr style="background-color:#FFFFFF;">
+                              <?= clearSpace(false, false, 20, false); ?>
                             </tr>
                           </table>
                           <!--[if mso]>
                           </td><td>
                           <![endif]-->
                           <!--[if (gte mso 9)|(IE)]>
-                          <table width="290" align="left" cellpadding="0" cellspacing="0" border="0">
+                          <table width="286" align="left" cellpadding="0" cellspacing="0" border="0">
                           <tr>
                           <td>
                           <![endif]-->
-                          <table style="width: 100%; max-width: 290px;" class="col290" align="left" border="0" cellpadding="0" cellspacing="0">
+                          <table style="width: 100%; max-width: 286px;" class="col286" align="left" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                               <td>
                                 <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
-                                  <table bgcolor="#FEF9F9" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #E88E93;">
-                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                  <table bgcolor="#FEF9F9" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #E88E93;">
+                                    <tr><td height="16" colspan="3" style="border:none;"></td></tr>
                                     <tr>
-                                      <td width="16"></td>
+                                      <td width="18"></td>
                                       <td>
                                         <span style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
                                           <span style="display:inline-block;font-size:20px;">&nbsp;</span>It could've been better.
@@ -132,10 +134,13 @@
                                       </td>
                                       <td width="16"></td>
                                     </tr>
-                                    <tr><td height="14" colspan="3"></td></tr>
+                                    <tr><td height="18" colspan="3"></td></tr>
                                   </table>
                                 </a>
                               </td>
+                            </tr>
+                            <tr style="background-color:#FFFFFF;">
+                              <?= clearSpace(false, false, 20, false); ?>
                             </tr>
                           </table>
                           <!--[if (gte mso 9)|(IE)]>
@@ -151,7 +156,7 @@
                 <?= ieEmailSpacer(16) ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <?= clearSpace(false, false, 40, false); ?>
+                <?= clearSpace(false, false, 20, false); ?>
               </tr>
             <?php else: ?>
               <tr style="background-color:#FFFFFF;">
@@ -177,13 +182,13 @@
               <![endif]-->
               <?= clearSpace(false, 20); ?>
             </tr>
-            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 80, true); ?></tr>
+            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 60, true); ?></tr>
             <tr style="background-color:#FFFFFF;">
               <td colspan="3">
                 <a href="<?= url() ?>"><?= $logo ?></a>
               </td>
             </tr>
-            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 56, true); ?></tr>
+            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 50, true); ?></tr>
           </tbody>
         </table>
       </td>
@@ -240,11 +245,13 @@
     <tr>
       <?= ieEmailSpacer(16) ?>
       <td class="footer">
-        <table align="center" width="616" style="max-width:616px;color:#999999;font-size:0.65rem">
+        <table align="center" width="100%" style="color:#999999;font-size:0.65rem">
           <tbody>
             <tr>
               <td>
+                <?= ieEmailSpacer(16) ?>
                 <span style="color:#999999;font-size:0.65rem">This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.</span>
+                <?= ieEmailSpacer(16) ?>
               </td>
             </tr>
           </tbody>
