@@ -55,6 +55,21 @@ function clearSpace($colspan=false, $width=false, $height=false, $style=false) {
 	return '<td'.r($colspan, ' colspan="'.$colspan.'"').r($width, ' width="'.$width.'"').r($height, ' height="'.$height.'"').r($style, ' style="line-height: '.$height.'px; font-size: '.$height.'px;"').'>&nbsp;</td>';
 }
 
+function ieEmailSpacer($width = false) {
+	$tag = '<!--[if (gte mso 9)|(IE)]>';
+	$tag.= '<td>';
+	$tag.= '<table width="'.$width.'" align="center" cellpadding="0" cellspacing="0" border="0">';
+	$tag.= '<tr>';
+	$tag.= '<![endif]-->';
+	$tag.= '<td style="max-width:'.$width.'px">&nbsp;</td>';
+	$tag.= '<!--[if (gte mso 9)|(IE)]>';
+	$tag.= '</tr>';
+	$tag.= '</table>';
+	$tag.= '</td>';
+	$tag.= '<![endif]-->';
+	return $tag;
+}
+
 /**
  * Get the value of a field from the campaign page or the appropriate fallback from reviews config if availible
  * @param  string $name     [The name of the field to return]

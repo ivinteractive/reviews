@@ -24,7 +24,10 @@
         line-height: inherit !important;
     }
     div[style*="margin: 16px 0;"] { margin: 0 !important; }
-
+    @media only screen and (min-device-width: 617px) {
+      .content {width: 616px !important;}
+      .col290 {width: 290px!important;}
+    }
     /* WEB FONTS */
     @media screen {
 
@@ -37,7 +40,12 @@
 </style>
 
 <body>
-<table width="616" align="center" style="max-width: 616px">
+<!--[if (gte mso 9)|(IE)]>
+<table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>
+<![endif]-->
+<table width="100%" align="center" class="content" style="max-width: 616px" cellpadding="0" cellspacing="0" border="0">
   <tbody>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
     <tr>
@@ -54,63 +62,119 @@
           <tbody>
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
             <tr style="background-color:#FFFFFF;">
-              <td style="max-width:16px" width="16">&nbsp;</td>
+              <?= ieEmailSpacer(16) ?>
               <td>
                 <h1<?= $page?'':' class="error"'?> style="font-size:2.5rem;font-family:'Source Sans Pro',sans-serif">
                   <?= $page?$page->review_title()->value():'Page template is empty'; ?>
                 </h1>
               </td>
-              <td style="max-width:16px" width="16">&nbsp;</td>
+              <?= ieEmailSpacer(16) ?>
             </tr>
             <tr style="background-color:#FFFFFF;">
-              <td style="max-width:16px" width="16"></td>
+              <?= ieEmailSpacer(16) ?>
               <td>
                 <?= $page?'<h2 style="font-size:1.4rem;font-family:\'Source Sans Pro\',sans-serif;color:#797979;font-weight:300;line-height:1.25;">'.$page->review_subtitle()->value().'</h2>':''; ?>
               </td>
-              <td style="max-width:16px" width="16">&nbsp;</td>
+              <?= ieEmailSpacer(16) ?>
             </tr>
             <?php if($page->email_type()->value() === 'skip'): ?>
               <tr style="background-color:#FFFFFF;">
                 <?= clearSpace(false, false, 40, false); ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <td style="max-width:16px" width="16">&nbsp;</td>
+                <?= ieEmailSpacer(16) ?>
                 <td>
                   <table align="center" width="100%">
                     <tbody>
                       <tr>
-                        <td align="right">
-                          <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]">
-                            <img src="<?= url() ?>/site/plugins/reviews/assets/images/email-button-green.png" alt="I liked it. Thank you.">
-                          </a>
-                        </td>
-                        <td width="35"></td>
-                        <td align="left">
-                          <a href="<?= $page->url()?>/feedback">
-                            <img src="<?= url() ?>/site/plugins/reviews/assets/images/email-button-red.png" alt="It Could've Been Better.">
-                          </a>
+                        <td>
+                          <table width="290" align="left" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td>
+                                <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
+                                  <table bgcolor="#FAFDFA" bordercolor="#A9DB94" border="1" align="center" cellpadding="0" cellspacing="0">
+                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                    <tr>
+                                      <td width="16" style="border:none;"></td>
+                                      <td style="border:none;">
+                                        <span style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
+                                          <span style="display:inline-block;font-size:20px;margin-right:10px;">👍</span>I liked it. Thank you.
+                                        </span>
+                                      </td>
+                                      <td width="16" style="border:none;"></td>
+                                    </tr>
+                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                  </table>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                          <!--[if mso]>
+                          </td><td>
+                          <![endif]-->
+                          <!--[if (gte mso 9)|(IE)]>
+                          <table width="290" align="left" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                          <td>
+                          <![endif]-->
+                          <table style="width: 100%; max-width: 290px;" class="col290" align="left" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td>
+                                <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
+                                  <table bgcolor="#FEF9F9" bordercolor="#E88E93" align="center"  border="1" cellpadding="0" cellspacing="0">
+                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                    <tr>
+                                      <td width="16" style="border:none;"></td>
+                                      <td style="border:none;">
+                                        <span style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
+                                          <span style="display:inline-block;font-size:20px;">&nbsp;</span>It could've been better.
+                                        </span>
+                                      </td>
+                                      <td width="16" style="border:none;"></td>
+                                    </tr>
+                                    <tr><td height="14" colspan="3" style="border:none;"></td></tr>
+                                  </table>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                          <!--[if (gte mso 9)|(IE)]>
+                          </td>
+                          </tr>
+                          </table>
+                          <![endif]-->
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </td>
-                <td style="max-width:16px" width="16">&nbsp;</td>
+                <?= ieEmailSpacer(16) ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <?= clearSpace(false, false, 20, false); ?>
+                <?= clearSpace(false, false, 40, false); ?>
               </tr>
             <?php else: ?>
               <tr style="background-color:#FFFFFF;">
-                <td style="max-width:16px" width="16">&nbsp;</td>
+                <?= ieEmailSpacer(16) ?>
                 <td>
                   <?= buttonTag('Leave us a review',$page->url(),$page->reveiw_button_color()->isNotEmpty()?$page->reveiw_button_color()->value():false) ?>
                 </td>
-                <td style="max-width:16px" width="16">&nbsp;</td>
+                <?= ieEmailSpacer(16) ?>
               </tr>
             <?php endif; ?>
             <tr style="background-color:#FFFFFF;">
               <?= clearSpace(false, 20); ?>
+              <!--[if (gte mso 9)|(IE)]>
+              <td>
+              <table width="475" align="center" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+              <![endif]-->
               <td style="max-width: 475px"><?= $page->email_text()->kt() ?></td>
+              <!--[if (gte mso 9)|(IE)]>
+              </tr>
+              </table>
+              </td>
+              <![endif]-->
               <?= clearSpace(false, 20); ?>
             </tr>
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 80, true); ?></tr>
@@ -130,20 +194,20 @@
       <td colspan="3" height="45" style="line-height:45px;font-size:45px;"></td>
     </tr>
     <tr>
-      <td style="max-width:16px" width="16">&nbsp;</td>
+      <?= ieEmailSpacer(16) ?>
       <td class="footer">
         <span style="color:#999999;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
         <span style="color:#999999;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span style="color:#999999;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
-      <td style="max-width:16px" width="16">&nbsp;</td>
+      <?= ieEmailSpacer(16) ?>
     </tr>
     <tr>
-      <td style="max-width:16px" width="16">&nbsp;</td>
+      <?= ieEmailSpacer(16) ?>
       <td class="footer">
         <span style="color:#999999;font-size:0.65rem;"><?= $page->email_footer_address()->kt() ?></span>
       </td>
-      <td style="max-width:16px" width="16">&nbsp;</td>
+      <?= ieEmailSpacer(16) ?>
     </tr>
     <tr>
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
@@ -174,7 +238,7 @@
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
     </tr>
     <tr>
-      <td style="max-width:16px" width="16">&nbsp;</td>
+      <?= ieEmailSpacer(16) ?>
       <td class="footer">
         <table align="center" width="616" style="max-width:616px;color:#999999;font-size:0.65rem">
           <tbody>
@@ -186,10 +250,15 @@
           </tbody>
         </table>
       </td>
-      <td style="max-width:16px" width="16">&nbsp;</td>
+      <?= ieEmailSpacer(16) ?>
     </tr>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
   </tbody>
 </table>
+<!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
 </body>
 </html>
