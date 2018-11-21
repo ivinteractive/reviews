@@ -8,13 +8,13 @@
 <style><?= file_get_contents(__DIR__ . DS . '..' . DS . 'css' . DS . 'email.css') ?></style>
 <?= $customCss ?>
 <style type="text/css">
-    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-    img { -ms-interpolation-mode: bicubic; }
-    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
-    table { border-collapse: collapse !important; }
-    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
-    p {margin:0;}
+    body[yahoo], body[yahoo] table, body[yahoo] td, body[yahoo] a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    body[yahoo] table, body[yahoo] td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    body[yahoo] img { -ms-interpolation-mode: bicubic; }
+    body[yahoo] img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    body[yahoo] table { border-collapse: collapse !important; }
+    body[yahoo] { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+    body[yahoo] p {margin:0;}
     a[x-apple-data-detectors] {
         color: inherit !important;
         text-decoration: none !important;
@@ -25,8 +25,8 @@
     }
     div[style*="margin: 16px 0;"] { margin: 0 !important; }
     @media only screen and (min-device-width: 617px) {
-      .content {width: 616px !important;}
-      .col286 {width: 286px!important;}
+      body[yahoo] .content {width: 616px !important;}
+      body[yahoo] .col286 {width: 286px!important;}
     }
     /* WEB FONTS */
     @media screen {
@@ -34,11 +34,11 @@
     }
     /* MOBILE STYLES WHERE SUPPORTED */
     @media screen and (max-width: 600px) {
-      .hide-mobile {display: none;}
+      body[yahoo] .hide-mobile {display: none;}
     }
 </style>
 
-<body>
+<body yahoo>
 <!--[if (gte mso 9)|(IE)]>
 <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
 <tr>
@@ -48,7 +48,7 @@
   <tbody>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
     <tr>
-      <td width="100%" colspan="3" style="line-height:0;">
+      <td width="100%" colspan="3" style="line-height:0;font-size:2.25rem;font-family:'Source Sans Pro',sans-serif;">
         <a href="<?= url() ?>"><?= $hero ?></a>
       </td>
     </tr>
@@ -202,7 +202,7 @@
       <?= ieEmailSpacer(16) ?>
       <td class="footer">
         <span style="color:#999999;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
-        <span style="color:#999999;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span style="color:#999999;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>" style="color:#999999;"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span style="color:#999999;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
       <?= ieEmailSpacer(16) ?>
@@ -228,7 +228,7 @@
                   <tbody>
                     <tr style="color:#D7D7D7;font-size:0.65rem;">
                       <td style="color:#D7D7D7;font-size:0.65rem;"><img src="<?= url() ?>/site/plugins/reviews/assets/images/ivi-logo.png" alt="IV Interactive Logo" width="16"></td>
-                      <td style="color:#D7D7D7;font-size:0.65rem;">&nbsp;&nbsp;Powered by <a href="https://www.ivinteractive.com/" style="color:#D7D7D7!important;">IV Interactive</a></td>
+                      <td style="color:#D7D7D7;font-size:0.65rem;">&nbsp;&nbsp;Powered by <a href="https://www.ivinteractive.com/" style="color:#D7D7D7;">IV Interactive</a></td>
                     </tr>
                   </tbody>
                 </table>
