@@ -99,7 +99,12 @@
               <tr style="background-color:#FFFFFF;">
                 <?= ieEmailSpacer(16) ?>
                 <td>
-                  <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                  <td>
+                  <![endif]-->
+                  <table align="center" width="100%" style="max-width:616px" cellpadding="0" cellspacing="0" border="0">
                     <tbody>
                       <tr>
                         <td>
@@ -180,6 +185,11 @@
                       </tr>
                     </tbody>
                   </table>
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  </tr>
+                  </table>
+                  <![endif]-->
                 </td>
                 <?= ieEmailSpacer(16) ?>
               </tr>
@@ -210,13 +220,13 @@
               <![endif]-->
               <?= clearSpace(false, 20); ?>
             </tr>
-            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 60, true); ?></tr>
-            <tr style="background-color:#FFFFFF;">
+            <tr><?= clearSpace(3, false, 60, true); ?></tr>
+            <tr>
               <td colspan="3">
                 <a href="<?= url() ?>"><?= $logo ?></a>
               </td>
             </tr>
-            <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 50, true); ?></tr>
+            <tr><?= clearSpace(3, false, 50, true); ?></tr>
           </tbody>
         </table>
         <!--[if (gte mso 9)|(IE)]>
