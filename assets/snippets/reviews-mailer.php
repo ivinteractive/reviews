@@ -87,8 +87,7 @@
                 <?= clearSpace(false, false, 40, false); ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <td width="16"></td>
-                <td>
+                <td colspan="3">
                   <!--[if (gte mso 9)|(IE)]>
                   <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
                   <tr>
@@ -97,6 +96,7 @@
                   <table align="center" width="100%" style="max-width:616px" cellpadding="0" cellspacing="0" border="0">
                     <tbody>
                       <tr>
+                        <td width="16"></td>
                         <td>
                           <table width="286" height="65" align="left" border="0" cellpadding="0" cellspacing="0">
                             <tr>
@@ -172,6 +172,7 @@
                           </table>
                           <![endif]-->
                         </td>
+                        <td width="16"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -181,7 +182,6 @@
                   </table>
                   <![endif]-->
                 </td>
-                <td width="16"></td>
               </tr>
               <tr style="background-color:#FFFFFF;">
                 <?= clearSpace(false, false, 20, false); ?>
