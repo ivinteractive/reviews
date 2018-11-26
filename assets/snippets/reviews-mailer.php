@@ -97,8 +97,9 @@
                 <?= clearSpace(false, false, 40, false); ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <td colspan="3" >
-                  <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <?= ieEmailSpacer(16) ?>
+                <td>
+                  <table align="center" cellpadding="0" cellspacing="0" border="0">
                     <tbody>
                       <tr>
                         <td>
@@ -180,6 +181,7 @@
                     </tbody>
                   </table>
                 </td>
+                <?= ieEmailSpacer(16) ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
                 <?= clearSpace(false, false, 20, false); ?>
