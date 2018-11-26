@@ -54,10 +54,10 @@
       </td>
     </tr>
     <tr>
-      <td colspan="3" height="4" bgcolor="<?= $page->hero_border_color()->isNotEmpty()?$page->hero_border_color()->value():'#000000' ?>"></td>
+      <td width="100%" colspan="3" height="4" bgcolor="<?= $page->hero_border_color()->isNotEmpty()?$page->hero_border_color()->value():'#000000' ?>"></td>
     </tr>
     <tr>
-      <td colspan="3" style="background-color:#FFFFFF;border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;">
+      <td width="100%" colspan="3" style="background-color:#FFFFFF;border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;">
         <!--[if (gte mso 9)|(IE)]>
         <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -67,27 +67,27 @@
           <tbody>
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
             <tr style="background-color:#FFFFFF;">
-              <?= ieEmailSpacer(16) ?>
+              <td width="16"></td>
               <td>
                 <h1<?= $page?'':' class="error"'?> style="font-size:2.5rem;font-family:'Source Sans Pro',sans-serif">
                   <?= $page?$page->review_title()->value():'Page template is empty'; ?>
                 </h1>
               </td>
-              <?= ieEmailSpacer(16) ?>
+              <td width="16"></td>
             </tr>
             <tr style="background-color:#FFFFFF;">
-              <?= ieEmailSpacer(16) ?>
+              <td width="16"></td>
               <td>
                 <?= $page?'<h2 style="font-size:1.4rem;font-family:\'Source Sans Pro\',sans-serif;color:#797979;font-weight:300;line-height:1.25;">'.$page->review_subtitle()->value().'</h2>':''; ?>
               </td>
-              <?= ieEmailSpacer(16) ?>
+              <td width="16"></td>
             </tr>
             <?php if($page->email_type()->value() === 'skip'): ?>
               <tr style="background-color:#FFFFFF;">
                 <?= clearSpace(false, false, 40, false); ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <?= ieEmailSpacer(16) ?>
+                <td width="16"></td>
                 <td>
                   <!--[if (gte mso 9)|(IE)]>
                   <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
@@ -181,18 +181,18 @@
                   </table>
                   <![endif]-->
                 </td>
-                <?= ieEmailSpacer(16) ?>
+                <td width="16"></td>
               </tr>
               <tr style="background-color:#FFFFFF;">
                 <?= clearSpace(false, false, 20, false); ?>
               </tr>
             <?php else: ?>
               <tr style="background-color:#FFFFFF;">
-                <?= ieEmailSpacer(16) ?>
+                <td width="16"></td>
                 <td>
                   <?= buttonTag('Leave us a review',$page->url(),$page->reveiw_button_color()->isNotEmpty()?$page->reveiw_button_color()->value():false) ?>
                 </td>
-                <?= ieEmailSpacer(16) ?>
+                <td width="16"></td>
               </tr>
             <?php endif; ?>
             <tr style="background-color:#FFFFFF;">
@@ -232,20 +232,20 @@
       <td colspan="3" height="45" style="line-height:45px;font-size:45px;"></td>
     </tr>
     <tr>
-      <?= ieEmailSpacer(16) ?>
+      <td width="16"></td>
       <td class="footer">
         <span style="color:#999999;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
         <span style="color:#999999;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>" style="color:#999999;"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span style="color:#999999;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
-      <?= ieEmailSpacer(16) ?>
+      <td width="16"></td>
     </tr>
     <tr>
-      <?= ieEmailSpacer(16) ?>
+      <td width="16"></td>
       <td class="footer">
         <span style="color:#999999;font-size:0.65rem;"><?= $page->email_footer_address()->kt() ?></span>
       </td>
-      <?= ieEmailSpacer(16) ?>
+      <td width="16"></td>
     </tr>
     <tr>
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
@@ -276,21 +276,21 @@
       <td colspan="3" height="25" style="line-height:25px;font-size:25px;" class="footer"></td>
     </tr>
     <tr>
-      <?= ieEmailSpacer(16) ?>
+      <td width="16"></td>
       <td class="footer">
         <table align="center" width="100%" style="color:#999999;font-size:0.65rem" cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <tr>
+              <td width="16"></td>
               <td>
-                <?= ieEmailSpacer(16) ?>
                 <span style="color:#999999;font-size:0.65rem">This message contains information which may be confidential and/or privileged. Unless you are the intended recipient (or authorized to receive for the intended recipient), you may not read, use, copy or disclose to anyone the message or any information contained in the message. If you have received the message in error, please advise the sender by reply e-mail and delete the message and any attachment(s) thereto without retaining any copies.</span>
-                <?= ieEmailSpacer(16) ?>
               </td>
+              <td width="16"></td>
             </tr>
           </tbody>
         </table>
       </td>
-      <?= ieEmailSpacer(16) ?>
+      <td width="16"></td>
     </tr>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
   </tbody>
