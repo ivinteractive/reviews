@@ -127,7 +127,7 @@ kirby()->routes([
 				$required = [
 					'name' => '',
 					'email' => 'email',
-					'comments' => ''
+					'message' => ''
 				];
 
 				$form = ivform('reviews', [
@@ -136,9 +136,18 @@ kirby()->routes([
 					'ignores' => ['/'.url::path()]
 				]);
 
+				$errors = $form->showErrors();
+
+				if(count($errors)) {
+					$message = brick('div', 'Please correct the following errors:', ['id'=>'form-message','class'=>'error']);
+				} else {
+					$message = brick('div', kirbytext($success), ['id'=>'form-message','class'=>'success']);
+				}
+
 				$return = [
 					'success' => 1,
-					'message'  => $success,
+					'errors' => $errors,
+					'message'  => html($message),
 					'high_low' => !$existingReview ? 1 : null,
 					'form' => $form
 				];

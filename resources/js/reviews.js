@@ -80,7 +80,10 @@ function formSubmit(e) {
 		type: 'json',
 		data: data,
 		success: function(r) {
-			if(r.message) {
+			if (r.errors) {
+				setErrors(form, r.errors)
+			}
+			if(r.message && r.errors.length <= 0) {
 				document.getElementById('wrapper').innerHTML = r.message;
 			}
 			if(r.display) {
@@ -144,4 +147,19 @@ function randomString(token) {
 function externalClicked() {
 	document.getElementById('clicked').value = '1';
 	form.dispatchEvent(new Event('submit'));
+}
+
+function setErrors(form, errors) {
+	var current = form.querySelectorAll('.error');
+
+	for(var err=0; err<current.length; err++) {
+		current[err].className = current[err].className.replace(' error', '');
+	}
+
+	for(var key in errors) {
+		var input = form.querySelector('[name="'+key+'"]');
+		if(input) {
+			input.parentNode.className += ' error';
+		}
+	}
 }

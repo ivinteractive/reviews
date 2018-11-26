@@ -46,6 +46,20 @@ body#reviews {
 	}
 }
 
+#form-message {
+	padding: 2rem;
+	border: 1px solid;
+	font-size: 1.35rem;
+	&.success {
+		color: #139f13;
+		background: #6cb66c1a;
+	}
+	&.error {
+		color: #DD0000;
+		background: #e3959533;
+	}
+}
+
 header {
 	margin: 0;
 }
@@ -159,14 +173,21 @@ main {
 }
 
 .field {
-    margin-bottom: 1rem;
-    text-align: left;
-
+	margin-bottom: 1rem;
+	text-align: left;
+	&.error {
+		label {
+			color: #DD0000;
+		}
+		input, textarea {
+			border: 1px solid #DD0000;
+		}
+	}
 	@media screen and ($xs) {
 		&:nth-of-type(1) {
 			margin-top: 2rem;
 		}
-    }
+	}
 }
 
 label {

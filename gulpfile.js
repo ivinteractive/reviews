@@ -33,20 +33,36 @@ gulp.task('sass', function() {
 
 });
 
-gulp.task('uglify', function() {
+gulp.task('dependencies', function() {
 
-    gulp.src(paths.jsSrc)
-    .pipe(plumber({errorHandler: notify.onError("JS uglification error: <%= error.message %> in <%= error.filename %>")}))
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(uglify())
-    .pipe(autoprefixer({
-        browsers: ['> 1%'],
-        cascade: false
-    }))
-    .pipe(gulp.dest(paths.js));
+    var deps = require('./package.json').dependencies;
+
+    console.log(deps);
+
+    var mains = [];
+
+    for(var name in deps) {
+        var package = require('./node_modules/'+name+'/package.json');
+        mains.push('./node_modules/'+name+'/'+package.main+'.js');
+    }
+
+    return gulp.src(mains)
+            .pipe(plumber({errorHandler: notify.onError("JS uglification error: <%= error.message %>")}))
+            .pipe(concat('dependencies.js'))
+            .pipe(uglify())
+            .pipe(gulp.dest(paths.js));
 
 });
+
+gulp.task('uglify', function() {
+    return gulp.src(paths.jsSrc)
+        .pipe(plumber({errorHandler: notify.onError("JS uglification error: <%= error.message %>")}))
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.js));
+});
+
 
 gulp.task('build', function() {
     runSequence('sass','uglify');
