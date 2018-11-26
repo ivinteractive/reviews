@@ -16,12 +16,12 @@
     body[yahoo] { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
     body[yahoo] p {margin:0;}
     a[x-apple-data-detectors] {
-        color: inherit !important;
-        text-decoration: none !important;
-        font-size: inherit !important;
-        font-family: inherit !important;
-        font-weight: inherit !important;
-        line-height: inherit !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
     }
     div[style*="margin: 16px 0;"] { margin: 0 !important; }
     @media only screen and (min-device-width: 617px) {
@@ -35,6 +35,7 @@
     /* MOBILE STYLES WHERE SUPPORTED */
     @media screen and (max-width: 600px) {
       body[yahoo] .hide-mobile {display: none;}
+      br.hide-mobile {display: none;}
     }
 </style>
 
@@ -109,8 +110,8 @@
                                   <table bgcolor="#FAFDFA" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #A9DB94;">
                                     <tr><td height="18" colspan="3"></td></tr>
                                     <tr>
-                                      <td width="16"></td>
-                                      <td>
+                                      <td height="29" width="16"></td>
+                                      <td height="29">
                                         <span style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
                                           <!--[if (gte mso 9)|(IE)]>
                                           <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
@@ -121,7 +122,7 @@
                                           <![endif]-->
                                         </span>
                                       </td>
-                                      <td width="16"></td>
+                                      <td height="29" width="16"></td>
                                     </tr>
                                     <tr><td height="18" colspan="3"></td></tr>
                                   </table>
@@ -147,19 +148,19 @@
                                   <table bgcolor="#FEF9F9" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #E88E93;">
                                     <tr><td height="18" colspan="3"></td></tr>
                                     <tr>
-                                      <td width="16"></td>
-                                      <td>
+                                      <td height="29" width="16"></td>
+                                      <td height="29">
                                         <span style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
                                           <!--[if (gte mso 9)|(IE)]>
                                           <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
                                           <![endif]-->
-                                            <span style="display:inline-block;font-size:20px;">&nbsp;</span>It could've been better.
+                                            It could've been better.
                                           <!--[if (gte mso 9)|(IE)]>
                                           </a>
                                           <![endif]-->
                                         </span>
                                       </td>
-                                      <td width="16"></td>
+                                      <td height="29" width="16"></td>
                                     </tr>
                                     <tr><td height="18" colspan="3"></td></tr>
                                   </table>
