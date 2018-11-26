@@ -72,7 +72,7 @@
         <tr>
         <td>
         <![endif]-->
-        <table align="center" width="100%" style="max-width: 616px" bgcolor="#FFFFFF">
+        <table align="center" width="100%" style="max-width: 616px" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
             <tr style="background-color:#FFFFFF;">
@@ -98,7 +98,7 @@
               <tr style="background-color:#FFFFFF;">
                 <?= ieEmailSpacer(16) ?>
                 <td>
-                  <table align="center" width="100%">
+                  <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tbody>
                       <tr>
                         <td>
@@ -251,12 +251,12 @@
     </tr>
     <tr>
       <td colspan="3" style="color:#D7D7D7;font-size:0.65rem;" class="footer">
-        <table align="center" width="100%">
+        <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <tr>
               <td></td>
               <td>
-                <table align="center">
+                <table align="center" cellpadding="0" cellspacing="0" border="0">
                   <tbody>
                     <tr style="color:#D7D7D7;font-size:0.65rem;">
                       <td style="color:#D7D7D7;font-size:0.65rem;"><img src="<?= url() ?>/site/plugins/reviews/assets/images/ivi-logo.png" alt="IV Interactive Logo" width="16"></td>
@@ -277,7 +277,7 @@
     <tr>
       <?= ieEmailSpacer(16) ?>
       <td class="footer">
-        <table align="center" width="100%" style="color:#999999;font-size:0.65rem">
+        <table align="center" width="100%" style="color:#999999;font-size:0.65rem" cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <tr>
               <td>
