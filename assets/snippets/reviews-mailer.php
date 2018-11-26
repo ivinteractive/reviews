@@ -50,17 +50,7 @@
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
     <tr>
       <td width="100%" colspan="3" style="line-height:0;font-size:2.25rem;font-family:'Source Sans Pro',sans-serif;" cellpadding="0" cellspacing="0" border="0">
-        <!--[if (gte mso 9)|(IE)]>
-        <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-        <td>
-        <![endif]-->
         <a href="<?= url() ?>"><?= $hero ?></a>
-        <!--[if (gte mso 9)|(IE)]>
-        </td>
-        </tr>
-        </table>
-        <![endif]-->
       </td>
     </tr>
     <tr>
