@@ -67,12 +67,12 @@
       <td colspan="3" height="4" bgcolor="<?= $page->hero_border_color()->isNotEmpty()?$page->hero_border_color()->value():'#000000' ?>"></td>
     </tr>
     <tr>
-      <!--[if (gte mso 9)|(IE)]>
-      <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
-      <tr>
-      <td>
-      <![endif]-->
-      <td colspan="3" width="100%" style="max-width: 616px;background-color:#FFFFFF;border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;">
+      <td colspan="3" style="background-color:#FFFFFF;border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+        <td>
+        <![endif]-->
         <table align="center" width="100%" style="max-width: 616px" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0">
           <tbody>
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
@@ -99,7 +99,7 @@
               <tr style="background-color:#FFFFFF;">
                 <?= ieEmailSpacer(16) ?>
                 <td>
-                  <table align="center" cellpadding="0" cellspacing="0" border="0">
+                  <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tbody>
                       <tr>
                         <td>
@@ -219,12 +219,12 @@
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 50, true); ?></tr>
           </tbody>
         </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
       </td>
-      <!--[if (gte mso 9)|(IE)]>
-      </td>
-      </tr>
-      </table>
-      <![endif]-->
     </tr>
 
     <?php /**FOOTER**/ ?>
