@@ -272,7 +272,7 @@ kirby()->routes([
 			$mailer_values = [
 				'page' => $campaign_page,
 				'logo' => getCampaignImage('logo',$campaign_page,$page,['width'=>'118','alt'=>'Logo','class'=>'campaign-logo']),
-				'hero' => getCampaignImage('hero',$campaign_page,$page,['alt'=>'Hero Image']),
+				'hero' => getCampaignImage('hero',$campaign_page,$page,['width'=>'616','alt'=>'Hero Image']),
 				'customCss' => $customCss
 			];
 
