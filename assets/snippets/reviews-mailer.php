@@ -97,7 +97,7 @@
                     <tbody>
                       <tr>
                         <td>
-                          <table width="286" align="left" border="0" cellpadding="0" cellspacing="0">
+                          <table width="286" height="65" align="left" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                               <td>
                                 <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
@@ -107,7 +107,9 @@
                                       <td width="16"></td>
                                       <td>
                                         <span style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
-                                          <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.
+                                          <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
+                                            <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.
+                                          </a>
                                         </span>
                                       </td>
                                       <td width="16"></td>
@@ -129,7 +131,7 @@
                           <tr>
                           <td>
                           <![endif]-->
-                          <table width="100%" style="width: 100%; max-width: 286px;" class="col286" align="left" border="0" cellpadding="0" cellspacing="0">
+                          <table width="100%" height="65" style="width: 100%; max-width: 286px;" class="col286" align="left" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                               <td>
                                 <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
@@ -139,7 +141,9 @@
                                       <td width="16"></td>
                                       <td>
                                         <span style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
-                                          <span style="display:inline-block;font-size:20px;">&nbsp;</span>It could've been better.
+                                          <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
+                                            <span style="display:inline-block;font-size:20px;">&nbsp;</span>It could've been better.
+                                          </a>
                                         </span>
                                       </td>
                                       <td width="16"></td>
