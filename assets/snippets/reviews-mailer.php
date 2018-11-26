@@ -129,12 +129,12 @@
                           <tr>
                           <td>
                           <![endif]-->
-                          <table style="width: 100%; max-width: 286px;" class="col286" align="left" border="0" cellpadding="0" cellspacing="0">
+                          <table width="100%" style="width: 100%; max-width: 286px;" class="col286" align="left" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                               <td>
                                 <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
                                   <table bgcolor="#FEF9F9" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #E88E93;">
-                                    <tr><td height="18" colspan="3" style="border:none;"></td></tr>
+                                    <tr><td height="18" colspan="3"></td></tr>
                                     <tr>
                                       <td width="16"></td>
                                       <td>
