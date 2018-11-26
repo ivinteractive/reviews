@@ -67,7 +67,12 @@
     </tr>
     <tr>
       <td colspan="3" style="background-color: #FFFFFF; border: 1px solid #EEEEEE;">
-        <table align="center" width="100%" bgcolor="#FFFFFF">
+        <!--[if (gte mso 9)|(IE)]>
+        <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+        <td>
+        <![endif]-->
+        <table align="center" width="100%" style="max-width: 616px" bgcolor="#FFFFFF">
           <tbody>
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
             <tr style="background-color:#FFFFFF;">
@@ -213,6 +218,11 @@
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 50, true); ?></tr>
           </tbody>
         </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
       </td>
     </tr>
 
