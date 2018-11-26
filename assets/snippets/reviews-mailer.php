@@ -48,7 +48,7 @@
   <tbody>
     <tr><?= clearSpace(3, false, 80, true); ?></tr>
     <tr>
-      <td width="100%" colspan="3" style="line-height:0;max-width: 616px;font-size:2.25rem;font-family:'Source Sans Pro',sans-serif;">
+      <td width="100%" colspan="3" style="line-height:0;font-size:2.25rem;font-family:'Source Sans Pro',sans-serif;">
         <!--[if (gte mso 9)|(IE)]>
         <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -67,12 +67,7 @@
     </tr>
     <tr>
       <td colspan="3" style="background-color: #FFFFFF; border: 1px solid #EEEEEE;">
-        <!--[if (gte mso 9)|(IE)]>
-        <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-        <td>
-        <![endif]-->
-        <table align="center" width="100%" bgcolor="#FFFFFF" style="max-width: 616px">
+        <table align="center" width="100%" bgcolor="#FFFFFF">
           <tbody>
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
             <tr style="background-color:#FFFFFF;">
@@ -126,6 +121,9 @@
                               <?= clearSpace(false, false, 20, false); ?>
                             </tr>
                           </table>
+                          <!--[if mso]>
+                          </td><td>
+                          <![endif]-->
                           <!--[if (gte mso 9)|(IE)]>
                           <table width="286" align="left" cellpadding="0" cellspacing="0" border="0">
                           <tr>
@@ -136,9 +134,9 @@
                               <td>
                                 <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
                                   <table bgcolor="#FEF9F9" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #E88E93;">
-                                    <tr><td height="16" colspan="3" style="border:none;"></td></tr>
+                                    <tr><td height="18" colspan="3" style="border:none;"></td></tr>
                                     <tr>
-                                      <td width="18"></td>
+                                      <td width="16"></td>
                                       <td>
                                         <span style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
                                           <span style="display:inline-block;font-size:20px;">&nbsp;</span>It could've been better.
@@ -203,11 +201,6 @@
             <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 50, true); ?></tr>
           </tbody>
         </table>
-        <!--[if (gte mso 9)|(IE)]>
-        </td>
-        </tr>
-        </table>
-        <![endif]-->
       </td>
     </tr>
 
