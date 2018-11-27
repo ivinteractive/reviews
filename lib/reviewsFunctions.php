@@ -80,9 +80,9 @@ function ieEmailSpacer($width = false) {
 function getCampaignField($name, $campaign, $config) {
 	$field = false;
 
-	if($campaign) {
+	if($campaign && $campaign->{$name}()->isNotEmpty()) {
 		$field = $campaign->{$name}();
-	} else if($config && !$campaign) {
+	} else if(($config && !$campaign) || ($config && !$campaign->{$name}()->isNotEmpty())) {
 		$field = $config->{$name}();
 	}
 

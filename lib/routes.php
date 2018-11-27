@@ -25,7 +25,7 @@ kirby()->routes([
 			$hero = getCampaignImage('hero',$campaign_page,$page);
 
 			$min_rating = getCampaignField('min_rating',$campaign_page,$page);
-			$min_rating = $min_rating?$min_rating:'0';
+			$min_rating = $min_rating?$min_rating->value():'0';
 
 			$utm_source = get('utm_source', url());
 			$link_id = get('link_id');
@@ -107,6 +107,12 @@ kirby()->routes([
 
 				$existingReview = $db->findBy('token', get('token'));
 
+				$subject = getCampaignField('feedback_subject',$campaign_page,$page);
+				$recip_name = getCampaignField('feedback_recipient_name',$campaign_page,$page);
+				$recip_email = getCampaignField('feedback_recipient',$campaign_page,$page);
+				$sender_name = getCampaignField('feedback_sender_name',$campaign_page,$page);
+				$sender_email = getCampaignField('feedback_sender',$campaign_page,$page);
+
 				$actions = [
 					[
 						'_action' => 'db_insert',
@@ -117,11 +123,11 @@ kirby()->routes([
 					],
 					[
 						'_action' => 'email',
-						'subject' => getCampaignField('feedback_subject',$campaign_page,$page),
+						'subject' => $subject->value(),
 						'snippet' => 'reviews-email',
-						'to' => ['name'=>getCampaignField('feedback_recipient',$campaign_page,$page), 'email'=>getCampaignField('feedback_recipient_name',$campaign_page,$page)],
-						'sender' => ['name'=>getCampaignField('feedback_sender',$campaign_page,$page), 'email'=>getCampaignField('feedback_sender_name',$campaign_page,$page)],
-						'replyTo' => ['name'=>get('name'), 'email'=>get('email')],
+						'sender' => $sender_name->value().' <'.$sender_email->value().'>',
+						'to' => $recip_name->value().' <'.$recip_email->value().'>',
+						'replyTo' => get('name').' <'.get('email').'>',
 					]
 				];
 
@@ -138,6 +144,7 @@ kirby()->routes([
 				]);
 
 				$errors = $form->showErrors();
+				$form_output = $form->message();
 
 				if(count($errors)) {
 					$message = brick('div', 'Please correct the following errors:', ['id'=>'form-message','class'=>'error']);
@@ -150,7 +157,8 @@ kirby()->routes([
 					'errors' => $errors,
 					'message'  => html($message),
 					'high_low' => !$existingReview ? 1 : null,
-					'form' => $form
+					'form' => $form,
+					'form_output' => $form_output
 				];
 
 				return new Response($return, 'json');
@@ -353,7 +361,7 @@ kirby()->routes([
       $hero = getCampaignImage('hero',$campaign_page,$page);
 
       $min_rating = getCampaignField('min_rating',$campaign_page,$page);
-      $min_rating = $min_rating?$min_rating:'0';
+      $min_rating = $min_rating?$min_rating->value():'0';
 
       $utm_source = get('utm_source', url());
       $link_id = get('link_id');
