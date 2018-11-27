@@ -269,10 +269,13 @@ kirby()->routes([
 
 			$campaign_page = page(c::get('reviews-uri', 'reviews').'/'.$campaign);
 
+			$hero_alt = getCampaignField('hero_alt',$campaign_page,$page);
+			$logo_alt = getCampaignField('logo_alt',$campaign_page,$page);
+
 			$mailer_values = [
 				'page' => $campaign_page,
-				'logo' => getCampaignImage('logo',$campaign_page,$page,['width'=>'118','alt'=>'Logo','class'=>'campaign-logo']),
-				'hero' => getCampaignImage('hero',$campaign_page,$page,['width'=>'616','alt'=>'Hero Image','style'=>'display:block;width:100%']),
+				'logo' => getCampaignImage('logo',$campaign_page,$page,['width'=>'118','alt'=>$logo_alt,'class'=>'campaign-logo']),
+				'hero' => getCampaignImage('hero',$campaign_page,$page,['width'=>'616','alt'=>$hero_alt,'style'=>'display:block;width:100%']),
 				'customCss' => $customCss
 			];
 
