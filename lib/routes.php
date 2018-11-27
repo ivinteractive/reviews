@@ -117,10 +117,11 @@ kirby()->routes([
 					],
 					[
 						'_action' => 'email',
-						'subject' => EnvHelper::env('REVIEWS_SUBJECT'),
+						'subject' => getCampaignField('feedback_subject',$campaign_page,$page),
 						'snippet' => 'reviews-email',
-						'to' => ['name'=>EnvHelper::env('REVIEWS_RECIPIENT_NAME'), 'email'=>EnvHelper::env('REVIEWS_RECIPIENT_EMAIL')],
-						'sender' => ['name'=>EnvHelper::env('REVIEWS_SENDER_NAME'), 'email'=>EnvHelper::env('REVIEWS_SENDER_EMAIL')]
+						'to' => ['name'=>getCampaignField('feedback_recipient',$campaign_page,$page), 'email'=>getCampaignField('feedback_recipient_name',$campaign_page,$page)],
+						'sender' => ['name'=>getCampaignField('feedback_sender',$campaign_page,$page), 'email'=>getCampaignField('feedback_sender_name',$campaign_page,$page)],
+						'replyTo' => ['name'=>get('name'), 'email'=>get('email')],
 					]
 				];
 

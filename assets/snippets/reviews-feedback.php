@@ -40,4 +40,4 @@
   </div>
 </main>
 
-<?php snippet('reviews-footer', ['campaign_page'=>$campaign_page,'js'=>$js]) ?>
+<?php snippet('reviews-footer', ['page'=>$page,'campaign_page'=>$campaign_page,'js'=>$js]) ?>

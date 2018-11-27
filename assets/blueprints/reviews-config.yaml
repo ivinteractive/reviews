@@ -92,6 +92,25 @@ fields:
     type: checkbox
     text: 'Yes'
     width: 1/2
+  feedback_subject:
+    label: Feedback Email Subject
+    type: text
+  feedback_sender:
+    label: Feedback Sender Email
+    type: text
+    width: 1/2
+  feedback_sender_name:
+    label: Feedback Sender Name
+    type: text
+    width: 1/2
+  feedback_recipient:
+    label: Feedback Recipient Email
+    type: text
+    width: 1/2
+  feedback_recipient_name:
+    label: Feedback Recipient Name
+    type: text
+    width: 1/2
   footer_text:
     label: Footer Text
     type: markdown
