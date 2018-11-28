@@ -35,40 +35,6 @@ fields:
       3: 3
       4: 4
       5: 5
-  review_links:
-    label: Third Party Review Links
-    type: structure
-    style: table
-    fields:
-      link_id:
-        label: Public ID
-        type: text
-        required: true
-      name:
-        label: Review Name
-        type: text
-        icon: font
-        required: true
-      button_label:
-        label: Button Label
-        type: text
-        icon: font
-        required: true
-      link:
-        label: Review Link
-        type: url
-        icon: link
-        required: true
-      location:
-        label: Location
-        type: text
-      provider:
-        label: Provider
-        type: text
-      default_link:
-        label: Default Link
-        type: checkbox
-        text: 'Use this as the default link'
   logo:
     label: Logo (JPG, PNG)
     type: image
@@ -114,3 +80,42 @@ fields:
   footer_text:
     label: Footer Text
     type: markdown
+
+  linksTab:
+    label: Third Party Review Links
+    type:  tabs
+    icon: table
+  review_links:
+    label: Third Party Review Links
+    type: structure
+    style: table
+    fields:
+      link_id:
+        label: Public ID
+        type: text
+        required: true
+      name:
+        label: Review Name
+        type: text
+        icon: font
+        required: true
+      button_label:
+        label: Button Label
+        type: text
+        icon: font
+        required: true
+      link:
+        label: Review Link
+        type: url
+        icon: link
+        required: true
+      location:
+        label: Location
+        type: text
+      provider:
+        label: Provider
+        type: text
+      default_link:
+        label: Default Link
+        type: checkbox
+        text: 'Use this as the default link'
