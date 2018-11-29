@@ -56,7 +56,7 @@ kirby()->routes([
 
 			$hero = getCampaignImage('hero',$page,$page);
 
-			$min_rating = $page->min_rating();
+			$min_rating = getCampaignField('min_rating',$page,$page);
 			$min_rating = $min_rating?$min_rating:'0';
 
 			$utm_source = get('utm_source', url());
