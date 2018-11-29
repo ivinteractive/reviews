@@ -29,13 +29,11 @@
       body[yahoo] .col286 {width: 286px!important;}
     }
     /* WEB FONTS */
-    @media screen {
-
-    }
+    @media screen {}
     /* MOBILE STYLES WHERE SUPPORTED */
     @media screen and (max-width: 600px) {
       body[yahoo] .hide-mobile {display: none;}
-      br.hide-mobile {display: none;}
+      body[yahoo] br.hide-mobile {display: none;}
     }
 </style>
 
