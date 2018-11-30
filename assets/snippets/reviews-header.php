@@ -7,7 +7,7 @@
   <?= $css ?>
   <?php
 
-    $gtm_code = $campaign_page && $campaign_page->gtm_code()->isNotEmpty())?$campaign_page->gtm_code()->value():false;
+    $gtm_code = $campaign_page && $campaign_page->gtm_code()->isNotEmpty()?$campaign_page->gtm_code()->value():false;
     $gtm_script = '';
     $gtm_no_script = '';
 
