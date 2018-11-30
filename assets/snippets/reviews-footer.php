@@ -13,6 +13,8 @@
   </div>
 </footer>
 
+
+<?= '<script type="text/javascript">var campaign_title = "'.(isset($campaign_page) && $campaign_page)?$campaign_page->title():'No Title Set'.'"</script>'; ?>
 <?= $js ?>
 
 </body>
