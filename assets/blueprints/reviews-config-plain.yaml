@@ -17,6 +17,12 @@ fields:
   config_info:
     label: Configuration
     type:  info
+  gtm_code:
+    label: Google Tag Manager Code
+    type: text
+  homepage_url:
+    label: Homepage URL
+    type: text
   hero:
     label: Default Hero Image (JPG, PNG)
     type: image

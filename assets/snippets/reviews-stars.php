@@ -21,7 +21,7 @@
 
       </div>
 
-      <div class="logo"><a href="<?= url() ?>"><?= $logo ?></a></div>
+      <div class="logo"><a href="<?= $campaign_page->homepage_url()->value() ?>"><?= $logo ?></a></div>
 
       <input type="hidden" id="rating" name="rating" value="0">
       <input type="hidden" id="page-type" name="page_type" value="stars">

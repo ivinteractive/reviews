@@ -16,6 +16,12 @@ fields:
     label: Configuration
     type:  tabs
     icon: gear
+  gtm_code:
+    label: Google Tag Manager Code
+    type: text
+  homepage_url:
+    label: Homepage URL
+    type: text
   hero:
     label: Default Hero Image (JPG, PNG)
     type: image

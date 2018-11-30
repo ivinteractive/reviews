@@ -19,6 +19,12 @@ fields:
   title:
     label: Title
     type: text
+  gtm_code:
+    label: Google Tag Manager Code
+    type: text
+  homepage_url:
+    label: Homepage URL
+    type: text
   hero:
     label: Hero Image (JPG, PNG)
     type: image
