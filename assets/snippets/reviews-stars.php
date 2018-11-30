@@ -1,7 +1,8 @@
 <?php snippet('reviews-header', ['campaign_page'=>$campaign_page,'css'=>$css,'hero'=>$hero]) ?>
+<?php $slug = $campaign_page?$campaign_page->slug():''; ?>
 <main>
   <div class="container">
-    <form action="<?= url('reviews-process/'.$campaign_page->slug()) ?>" method="post" id="reviews-form">
+    <form action="<?= url('reviews-process/'.$slug) ?>" method="post" id="reviews-form">
       <div id="wrapper">
 
         <h1<?= $campaign_page?'':' class="error"'?>>

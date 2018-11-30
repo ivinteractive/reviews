@@ -1,7 +1,7 @@
 <footer>
   <div class="footer-text">
     <?php
-      if(isset($campaign_page) && $campaign_page->footer_text()->isNotEmpty()) {
+      if(isset($campaign_page) && $campaign_page && $campaign_page->footer_text()->isNotEmpty()) {
         echo $campaign_page->footer_text()->kt();
       } elseif(isset($page) && $page->footer_text()->isNotEmpty()) {
         echo $page->footer_text()->kt();
