@@ -39,7 +39,7 @@
 <header>
   <div class="container">
     <div id="hero">
-      <a href="<?= $campaign_page->homepage_url()->isNotEmpty()?$campaign_page->homepage_url()->value():url() ?>">
+      <a href="<?= $campaign_page && $campaign_page->homepage_url()->isNotEmpty()?$campaign_page->homepage_url()->value():url() ?>">
         <?= $hero ?>
       </a>
     </div>
