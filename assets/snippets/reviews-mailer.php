@@ -4,6 +4,7 @@
 <title>Leave a Review</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style><?= file_get_contents(__DIR__ . DS . '..' . DS . 'css' . DS . 'email.css') ?></style>
 <?= $customCss ?>
