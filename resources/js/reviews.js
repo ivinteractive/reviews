@@ -44,6 +44,25 @@ function clickStar(e) {
 	document.getElementById('rating').value = activeStars;
 }
 
+/*=============================
+=        Event Tracking       =
+=============================*/
+
+var links = document.querySelectorAll('a:not(#external-review-link)');
+for (var i = 0; i < links.length; i++) {
+	links[i].addEventListener('click', function(e) {
+		trackEvent('Outbound Link', 'Link Click', e.currentTarget.innerText, '');
+	});
+}
+
+var externalReviewLink = document.getElementById('external-review-link');
+if (externalReviewLink) {
+	externalReviewLink.addEventListener('click', function(e) {
+		var linkText = e.currentTarget.innerText.split(" ");
+		trackEvent('Exit To Review Site', 'CTA Button Click', linkText[linkText.length - 1], '');
+	});
+}
+
 
 /*=============================
 =        Form Submission      =
