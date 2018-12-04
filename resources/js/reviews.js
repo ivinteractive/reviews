@@ -103,31 +103,11 @@ function formSubmit(e) {
 		success: function(r) {
 			if (r.errors) {
 				setErrors(form, r.errors);
-
-				if(typeof ga==='undefined') {
-					console.log(label);
-				} else {
-					if ("ga" in window) {
-						tracker = ga.getAll()[0];
-						if (tracker)
-							tracker.send('event','Negative Feedback Form', 'Form Submit', campaign_title, '0');
-					}
-				}
-
+				trackEvent('Negative Feedback Form', 'Form Submit', campaign_title, '0');
 			}
 			if(r.message && r.errors.length <= 0) {
 				document.getElementById('wrapper').innerHTML = r.message;
-
-				if(typeof ga==='undefined') {
-					console.log(label);
-				} else {
-					if ("ga" in window) {
-						tracker = ga.getAll()[0];
-						if (tracker)
-							tracker.send('event','Negative Feedback Form', 'Form Submit', campaign_title, '1');
-					}
-				}
-
+				trackEvent('Negative Feedback Form', 'Form Submit', campaign_title, '1');
 			}
 			if(r.display) {
 				form.querySelector('button').className = displayField.value == '1' ? 'added' : '';
@@ -203,6 +183,19 @@ function setErrors(form, errors) {
 		var input = form.querySelector('[name="'+key+'"]');
 		if(input) {
 			input.parentNode.className += ' error';
+		}
+	}
+}
+
+function trackEvent(campaign,action,label,value) {
+	value = typeof value !== 'undefined' ? value : '0';
+	if(typeof ga==='undefined') {
+	console.log(label);
+	} else {
+		if ("ga" in window) {
+			tracker = ga.getAll()[0];
+			if (tracker)
+				tracker.send('event',campaign, action, label, value);
 		}
 	}
 }
