@@ -52,11 +52,11 @@ body#reviews {
 	font-size: 1.35rem;
 	&.success {
 		color: #139f13;
-		background: #6cb66c1a;
+		background: rgba(108,182,108,0.101);
 	}
 	&.error {
 		color: #DD0000;
-		background: #e3959533;
+		background: rgba(227,149,149,0.2);
 	}
 }
 
@@ -327,7 +327,7 @@ footer {
 			position: relative;
 			&::before {
 				content: '';
-				background-image: url('/site/plugins/reviews/assets/images/ivi-logo.png');
+				background-image: url('/assets/images/ivi-reviews-logo.png');
 				background-repeat: no-repeat;
 				background-size: cover;
 				position: absolute;

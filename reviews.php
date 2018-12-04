@@ -4,6 +4,11 @@ require_once(__DIR__ . DS . 'lib' . DS . 'reviewsFunctions.php');
 
 $page = page(c::get('reviews-dir', 'reviews'));
 $db = defaultDB()->table('reviews');
+$iv_logo_path = getcwd().'/../site/plugins/reviews/assets/images/ivi-logo.png';
+
+if (!file_exists('../public/assets/images/ivi-reviews-logo.png')){
+	copy($iv_logo_path, '../public/assets/images/ivi-reviews-logo.png');
+}
 
 // Set up blueprints
 if(!c::get('reviews-blueprint') && !c::get('reviews-config-blueprint')) {

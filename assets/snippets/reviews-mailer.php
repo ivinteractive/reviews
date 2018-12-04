@@ -259,7 +259,7 @@
                 <table align="center" cellpadding="0" cellspacing="0" border="0">
                   <tbody>
                     <tr style="color:#D7D7D7;font-size:0.65rem;">
-                      <td style="color:#D7D7D7;font-size:0.65rem;"><img src="<?= url() ?>/site/plugins/reviews/assets/images/ivi-logo.png" alt="IV Interactive Logo" width="16"></td>
+                      <td style="color:#D7D7D7;font-size:0.65rem;"><img src="<?= url() ?>/assets/images/ivi-reviews-logo.png" alt="IV Interactive Logo" width="16"></td>
                       <td style="color:#D7D7D7;font-size:0.65rem;">&nbsp;&nbsp;Powered by <a href="https://www.ivinteractive.com/" style="color:#D7D7D7;">IV Interactive</a></td>
                     </tr>
                   </tbody>
