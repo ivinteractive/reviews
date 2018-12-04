@@ -16,7 +16,7 @@ kirby()->routes([
 		'pattern' => c::get('reviews-uri', 'reviews').'/(:any)',
 		'action'  => function($campaign) use($page, $css, $js) {
 
-			$campaign_page = page(c::get('reviews-uri', 'reviews').'/'.$campaign);
+			$campaign_page = page(c::get('reviews-dir', 'reviews').'/'.$campaign);
 
 			$customCss = customCss($page, $campaign_page);
 
@@ -86,7 +86,7 @@ kirby()->routes([
 		'ajax'	  => true,
 		'action'  => function($campaign) use($page, $db) {
 
-			$campaign_page = page(c::get('reviews-uri', 'reviews').'/'.$campaign);
+			$campaign_page = page(c::get('reviews-dir', 'reviews').'/'.$campaign);
 
 			try {
 				foreach(getCampaignField('review_links',$campaign_page,$page)->toStructure() as $reviewLink) {
@@ -276,7 +276,7 @@ kirby()->routes([
 			  '}' => ']'
 			]);
 
-			$campaign_page = page(c::get('reviews-uri', 'reviews').'/'.$campaign);
+			$campaign_page = page(c::get('reviews-dir', 'reviews').'/'.$campaign);
 
 			$hero_alt = getCampaignField('hero_alt',$campaign_page,$page);
 			$logo_alt = getCampaignField('logo_alt',$campaign_page,$page);
@@ -302,7 +302,7 @@ kirby()->routes([
         '}' => ']'
       ]);
 
-      $campaign_page = page(c::get('reviews-uri', 'reviews').'/'.$campaign);
+      $campaign_page = page(c::get('reviews-dir', 'reviews').'/'.$campaign);
 
 			$customCss = customCss($page, $campaign_page);
 
@@ -342,7 +342,7 @@ kirby()->routes([
         '}' => ']'
       ]);
 
-      $campaign_page = page(c::get('reviews-uri', 'reviews').'/'.$campaign);
+      $campaign_page = page(c::get('reviews-dir', 'reviews').'/'.$campaign);
 
 			$review_links = $page->review_links()->toStructure();
 

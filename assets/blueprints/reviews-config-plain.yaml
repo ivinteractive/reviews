@@ -17,6 +17,9 @@ fields:
   config_info:
     label: Configuration
     type:  info
+  title:
+    label: Title
+    type: text
   gtm_code:
     label: Google Tag Manager Code
     type: text

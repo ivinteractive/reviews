@@ -36,6 +36,8 @@ Each campaign will have several pages associated with it:
 
 ### Config Variables:
 - reviews-uri (**string**)
+  The top-level URI for all review routes
+- reviews-dir (**string**)
   URI of the reviews top-level page
 - reviews-blueprint (**string**)
   Name of the Kirby blueprint for the landing page

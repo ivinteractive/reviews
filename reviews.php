@@ -2,7 +2,7 @@
 
 require_once(__DIR__ . DS . 'lib' . DS . 'reviewsFunctions.php');
 
-$page = page(c::get('reviews-uri', 'reviews'));
+$page = page(c::get('reviews-dir', 'reviews'));
 $db = defaultDB()->table('reviews');
 
 // Set up blueprints

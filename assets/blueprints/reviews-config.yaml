@@ -16,6 +16,9 @@ fields:
     label: Configuration
     type:  tabs
     icon: gear
+  title:
+    label: Title
+    type: text
   gtm_code:
     label: Google Tag Manager Code
     type: text
