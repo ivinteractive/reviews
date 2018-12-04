@@ -36,6 +36,54 @@
       body[yahoo] .hide-mobile {display: none;}
       body[yahoo] br.hide-mobile {display: none;}
     }
+
+    /* Linked Styles */
+		body[yahoo] { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none }
+		body[yahoo] a { color:#0000ee; text-decoration:none }
+		body[yahoo] p { padding:0 !important; margin:0 !important }
+		body[yahoo] img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+		body[yahoo] .mcnPreviewText { display: none !important; }
+
+
+		/* Mobile styles */
+		@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+			.mobile-shell { width: 100% !important; min-width: 100% !important; }
+			.bg { background-size: 100% auto !important; -webkit-background-size: 100% auto !important; }
+
+			.text-header,
+			.m-center { text-align: center !important; }
+
+			.center { margin: 0 auto !important; }
+			.container { padding: 20px 10px !important }
+
+			.td { width: 100% !important; min-width: 100% !important; }
+
+			.m-br-15 { height: 15px !important; }
+			.p30-15 { padding: 30px 15px !important; }
+			.p0-15-30 { padding: 0px 15px 30px 15px !important; }
+			.p0-15 { padding: 0px 15px !important; }
+			.mpb30 { padding-bottom: 30px !important; }
+			.mpb15 { padding-bottom: 15px !important; }
+
+			.m-td,
+			.m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+
+			.m-block { display: block !important; }
+
+			.fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+
+			.column,
+			.column-dir,
+			.column-top,
+			.column-empty,
+			.column-empty2,
+			.column-dir-top { float: left !important; width: 100% !important; display: block !important; }
+
+			.column-empty { padding-bottom: 30px !important; }
+			.column-empty2 { padding-bottom: 10px !important; }
+
+			.content-spacing { width: 15px !important; }
+		}
 </style>
 
 <body yahoo>
@@ -87,99 +135,66 @@
               </tr>
               <tr style="background-color:#FFFFFF;">
                 <td colspan="3">
+                  <!-- Two Columns -->
                   <!--[if (gte mso 9)|(IE)]>
                   <table width="616" align="center" cellpadding="0" cellspacing="0" border="0">
                   <tr>
                   <td>
                   <![endif]-->
-                  <table align="center" width="100%" style="max-width:616px" cellpadding="0" cellspacing="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td width="16"></td>
-                        <td>
-                          <table width="286" height="65" align="left" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                              <td>
-                                <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
-                                  <table bgcolor="#FAFDFA" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #A9DB94;">
-                                    <tr><td height="18" colspan="3"></td></tr>
-                                    <tr>
-                                      <td height="29" width="16"></td>
-                                      <td height="29">
-                                        <span style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
-                                          <!--[if (gte mso 9)|(IE)]>
-                                          <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
-                                          <![endif]-->
-                                            <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.
-                                          <!--[if (gte mso 9)|(IE)]>
-                                          </a>
-                                          <![endif]-->
-                                        </span>
-                                      </td>
-                                      <td height="29" width="16"></td>
-                                    </tr>
-                                    <tr><td height="18" colspan="3"></td></tr>
-                                  </table>
-                                </a>
-                              </td>
-                            </tr>
-                            <tr style="background-color:#FFFFFF;">
-                              <?= clearSpace(false, false, 20, false); ?>
-                            </tr>
-                          </table>
-                          <!--[if mso]>
-                          </td><td>
-                          <![endif]-->
-                          <!--[if (gte mso 9)|(IE)]>
-                          <table width="286" align="left" cellpadding="0" cellspacing="0" border="0">
+                  <table width="100%" style="max-width:616px" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td style="padding-bottom: 40px;">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
                           <tr>
-                          <td>
-                          <![endif]-->
-                          <table width="100%" height="65" style="width: 100%; max-width: 286px;" class="col286" align="left" border="0" cellpadding="0" cellspacing="0">
-                            <tr>
-                              <td>
-                                <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
-                                  <table bgcolor="#FEF9F9" width="230" align="center" cellpadding="0" cellspacing="0" style="border: 1px solid #E88E93;">
-                                    <tr><td height="18" colspan="3"></td></tr>
-                                    <tr>
-                                      <td height="29" width="16"></td>
-                                      <td height="29">
-                                        <span style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;">
-                                          <!--[if (gte mso 9)|(IE)]>
-                                          <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
-                                          <![endif]-->
-                                            It could've been better.
-                                          <!--[if (gte mso 9)|(IE)]>
+                            <td class="p0-15-30" style="padding: 0px 0px 40px 0px;">
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                  <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <!-- Button -->
+                                      <tr>
+                                        <td class="text-link" style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
+                                          <a href="#" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
+                                            <span class="link-u" style="color:#4AA922; text-decoration:underline;"><span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.</span>
                                           </a>
-                                          <![endif]-->
-                                        </span>
-                                      </td>
-                                      <td height="29" width="16"></td>
-                                    </tr>
-                                    <tr><td height="18" colspan="3"></td></tr>
-                                  </table>
-                                </a>
-                              </td>
-                            </tr>
-                            <tr style="background-color:#FFFFFF;">
-                              <?= clearSpace(false, false, 20, false); ?>
-                            </tr>
-                          </table>
-                          <!--[if (gte mso 9)|(IE)]>
-                          </td>
+                                        </td>
+                                      </tr>
+                                      <!-- END Button -->
+                                    </table>
+                                  </th>
+                                  <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                  <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <!-- Button -->
+                                      <tr>
+                                        <td class="text-link" style="color:#C7363B;font-size:1rem;line-height:28px;font-weight:600;font-family:'Source Sans Pro',sans-serif;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
+                                          <a href="#" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
+                                            <span class="link-u" style="color:#C7363B;text-decoration:underline;">It could've been better.</span>
+                                          </a>
+                                        </td>
+                                      </tr>
+                                      <!-- END Button -->
+                                    </table>
+                                  </th>
+                                  <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                </tr>
+                              </table>
+                            </td>
                           </tr>
-                          </table>
-                          <![endif]-->
-                        </td>
-                        <td width="16"></td>
-                      </tr>
-                    </tbody>
+                          <tr>
+                            <td height="1" bgcolor="#e5e5e5" class="img" style="font-size:0pt; line-height:0pt; text-align:left;">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
                   </table>
                   <!--[if (gte mso 9)|(IE)]>
                   </td>
                   </tr>
                   </table>
                   <![endif]-->
+                  <!-- END Two Columns -->
                 </td>
               </tr>
               <tr style="background-color:#FFFFFF;">
