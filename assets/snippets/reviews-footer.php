@@ -14,7 +14,7 @@
 </footer>
 
 <?php if($campaign_page): ?>
-<script type="text/javascript">var campaign_title = "<?= ($campaign_page->title()->isNotEmpty())?$campaign_page->title():'No Title Set' ?>;"</script>
+<script type="text/javascript">var campaign_title = "<?= ($campaign_page->title()->isNotEmpty())?$campaign_page->title():'No Title Set' ?>";</script>
 <?php endif; ?>
 
 <?= $js ?>
