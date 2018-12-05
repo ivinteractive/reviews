@@ -35,6 +35,7 @@
     @media screen and (max-width: 600px) {
       body[yahoo] .hide-mobile {display: none;}
       body[yahoo] br.hide-mobile {display: none;}
+      .rwd-break {display: inline;}
     }
 
     /* Linked Styles */
@@ -45,6 +46,8 @@
 		body[yahoo] .mcnPreviewText { display: none !important; }
 
     .column-empty2 { padding-bottom: 20px !important; }
+
+    .rwd-break {display: block;}
 
 		/* Mobile styles */
 		@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
