@@ -239,7 +239,7 @@
               <?= clearSpace(false, 20); ?>
               <td>
                 <!--[if (gte mso 9)|(IE)]>
-                <table width="475" align="center" cellpadding="0" cellspacing="0" border="0">
+                <table width="400" align="center" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                 <td>
                 <![endif]-->
