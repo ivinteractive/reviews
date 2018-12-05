@@ -45,7 +45,7 @@ body#reviews {
 		}
 	}
 	@media screen and ($iphone) {
-		padding: 2rem 0;
+		padding: 1rem 0;
 	}
 }
 
@@ -121,7 +121,7 @@ footer {
 }
 
 #_submit {
-	margin-bottom: 2rem;
+	margin-bottom: 0.375rem;
 }
 
 .review-buttons {
@@ -320,8 +320,12 @@ star {
 	}
 }
 
+.logo a {
+	display: block;
+	margin-bottom: 1.5625rem;
+}
+
 img.campaign-logo {
-	margin-bottom: 3.1875rem;
 	@media screen and ($iphone) {
 		font-size: 1.5rem;
 	}

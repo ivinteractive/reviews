@@ -70,7 +70,7 @@
 
 			.m-br-15 { height: 15px !important; }
 			.p30-15 { padding: 30px 15px !important; }
-			.p0-20-20 { padding: 0px 20px 20px 20px !important; }
+			.p0-20-0-20 { padding: 0px 20px 0px 20px !important; }
 			.p0-15 { padding: 0px 15px !important; }
 			.mpb30 { padding-bottom: 30px !important; }
 			.mpb15 { padding-bottom: 15px !important; }
@@ -104,7 +104,6 @@
 <![endif]-->
 <table width="100%" align="center" class="content" style="max-width: 616px" cellpadding="0" cellspacing="0" border="0">
   <tbody>
-    <tr><?= clearSpace(3, false, 80, true); ?></tr>
     <tr>
       <td width="100%" colspan="3" style="line-height:0;font-size:2.25rem;font-family:'Source Sans Pro',sans-serif;" cellpadding="0" cellspacing="0" border="0">
         <a href="<?= $page->homepage_url()->isNotEmpty()?$page->homepage_url()->value():url() ?>"><?= $hero ?></a>
@@ -157,10 +156,10 @@
                         <td>
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                              <td class="p0-20-20" style="padding: 0px 0px 20px 0px;">
+                              <td class="p0-20-0-20" style="padding: 0px 0px 0px 0px;">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                   <tr>
-                                    <th class="column-empty" width="40" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-empty" width="60" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
                                     <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <!-- Button -->
@@ -182,7 +181,7 @@
                                         <!-- END Button -->
                                       </table>
                                     </th>
-                                    <th class="column-empty" width="40" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-empty" width="60" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
                                     <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <!-- Button -->
@@ -204,7 +203,7 @@
                                         <!-- END Button -->
                                       </table>
                                     </th>
-                                    <th class="column-empty" width="40" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-empty" width="60" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
                                   </tr>
                                 </table>
                               </td>
@@ -226,7 +225,7 @@
                 </td>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <?= clearSpace(false, false, 20, false); ?>
+                <?= clearSpace(false, false, 30, false); ?>
               </tr>
             <?php else: ?>
               <tr style="background-color:#FFFFFF;">
@@ -239,20 +238,28 @@
             <?php endif; ?>
             <tr style="background-color:#FFFFFF;">
               <?= clearSpace(false, 20); ?>
-              <!--[if (gte mso 9)|(IE)]>
               <td>
-              <table width="475" align="center" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-              <![endif]-->
-              <td style="max-width: 475px"><?= $page->email_text()->kt() ?></td>
-              <!--[if (gte mso 9)|(IE)]>
-              </tr>
-              </table>
+                <!--[if (gte mso 9)|(IE)]>
+                <table width="475" align="center" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                <td>
+                <![endif]-->
+                <table width="100%" style="max-width: 475px" align="center">
+                  <tbody>
+                    <tr>
+                      <td><?= $page->email_text()->kt() ?></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!--[if (gte mso 9)|(IE)]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
               </td>
-              <![endif]-->
               <?= clearSpace(false, 20); ?>
             </tr>
-            <tr><?= clearSpace(3, false, 60, true); ?></tr>
+            <tr><?= clearSpace(3, false, 50, true); ?></tr>
             <tr>
               <td colspan="3">
                 <a href="<?= $page->homepage_url()->isNotEmpty()?$page->homepage_url()->value():url() ?>"><?= $logo ?></a>
