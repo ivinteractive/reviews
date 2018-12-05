@@ -1,4 +1,5 @@
 $xs: "max-width: 767px";
+$mobile: "max-width: 439px";
 $iphone: "max-width: 320px";
 
 body {
@@ -44,7 +45,7 @@ body#reviews {
 			padding: 2.25rem 1.75rem;
 		}
 	}
-	@media screen and ($iphone) {
+	@media screen and ($mobile) {
 		padding: 1rem 0;
 	}
 }
@@ -73,7 +74,7 @@ footer {
 	@media screen and ($xs) {
 		padding: 0 1.5rem;
 	}
-	@media screen and ($iphone) {
+	@media screen and ($mobile) {
 		padding: 0 1.25rem;
 	}
 }
@@ -326,7 +327,7 @@ star {
 }
 
 img.campaign-logo {
-	@media screen and ($iphone) {
+	@media screen and ($mobile) {
 		font-size: 1.5rem;
 	}
 }
