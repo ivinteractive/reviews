@@ -38,7 +38,7 @@
     }
 
     /* Linked Styles */
-		body[yahoo] { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#ffffff; -webkit-text-size-adjust:none }
+		body[yahoo] { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f8f8f8; -webkit-text-size-adjust:none }
 		body[yahoo] a { color:#0000ee; text-decoration:none }
 		body[yahoo] p { padding:0 !important; margin:0 !important }
 		body[yahoo] img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
@@ -142,52 +142,54 @@
                   <td>
                   <![endif]-->
                   <table width="100%" style="max-width:616px" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td style="padding-bottom: 40px;">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td class="p0-15-30" style="padding: 0px 0px 40px 0px;">
-                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tr>
-                                  <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
-                                  <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                      <!-- Button -->
-                                      <tr>
-                                        <td class="text-link" style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
-                                          <a href="#" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
-                                            <span class="link-u" style="color:#4AA922; text-decoration:underline;"><span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.</span>
-                                          </a>
-                                        </td>
-                                      </tr>
-                                      <!-- END Button -->
-                                    </table>
-                                  </th>
-                                  <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
-                                  <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                      <!-- Button -->
-                                      <tr>
-                                        <td class="text-link" style="color:#C7363B;font-size:1rem;line-height:28px;font-weight:600;font-family:'Source Sans Pro',sans-serif;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
-                                          <a href="#" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
-                                            <span class="link-u" style="color:#C7363B;text-decoration:underline;">It could've been better.</span>
-                                          </a>
-                                        </td>
-                                      </tr>
-                                      <!-- END Button -->
-                                    </table>
-                                  </th>
-                                  <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td height="1" bgcolor="#e5e5e5" class="img" style="font-size:0pt; line-height:0pt; text-align:left;">&nbsp;</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
+                    <tbody>
+                      <tr>
+                        <td style="padding-bottom: 40px;">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td class="p0-15-30" style="padding: 0px 0px 40px 0px;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <!-- Button -->
+                                        <tr>
+                                          <td class="text-link" style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
+                                            <a href="#" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
+                                              <span class="link-u" style="color:#4AA922; text-decoration:underline;"><span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.</span>
+                                            </a>
+                                          </td>
+                                        </tr>
+                                        <!-- END Button -->
+                                      </table>
+                                    </th>
+                                    <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <!-- Button -->
+                                        <tr>
+                                          <td class="text-link" style="color:#C7363B;font-size:1rem;line-height:28px;font-weight:600;font-family:'Source Sans Pro',sans-serif;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
+                                            <a href="#" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
+                                              <span class="link-u" style="color:#C7363B;text-decoration:underline;">It could've been better.</span>
+                                            </a>
+                                          </td>
+                                        </tr>
+                                        <!-- END Button -->
+                                      </table>
+                                    </th>
+                                    <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td height="1" bgcolor="#FFFFFF" class="img" style="font-size:0pt; line-height:0pt; text-align:left;">&nbsp;</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
                   </table>
                   <!--[if (gte mso 9)|(IE)]>
                   </td>

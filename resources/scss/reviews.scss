@@ -44,6 +44,9 @@ body#reviews {
 			padding: 2.25rem 1.75rem;
 		}
 	}
+	@media screen and ($iphone) {
+		padding: 2rem 0;
+	}
 }
 
 #form-message {
@@ -64,7 +67,9 @@ header {
 	margin: 0;
 }
 
-main {
+header,
+main,
+footer {
 	@media screen and ($xs) {
 		padding: 0 1.5rem;
 	}
@@ -90,7 +95,8 @@ main {
 #reviews {
 	h1 {
 		margin: 0 0 1rem;
-		font-size: 2.75rem;
+		// font-size: 2.75rem;
+		font-size: 2.4rem;
 
 		&.error {
 			color: #DD0000;
@@ -103,7 +109,8 @@ main {
 		}
 	}
 	h2 {
-		color: #797979;
+		// color: #797979;
+		color: #000000;
 		font-weight: 300;
 		line-height: 1.25;
 		margin-bottom: 3.0625rem;
@@ -157,13 +164,23 @@ main {
 	border-radius: 0;
 	background-color: #4E86FA;
 	margin-bottom: 2.8125rem;
-	border-bottom: 0.125rem solid #286BD1;
+	// border-bottom: 0.125rem solid #286BD1;
 	font-size: 1.125rem;
 	text-transform: capitalize;
 	font-weight: 600;
 	padding: 0.65rem 2rem;
+	border-radius: 3.125rem;
+	transition: background-color .25s;
 	span {
-		border-bottom: 0.0625rem solid #FFFFFF;
+		border-bottom: 0.0625rem solid transparent;
+		transition: border-color .25s;
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: #286bd1;
+		span {
+			border-color: #FFFFFF;
+		}
 	}
 }
 
@@ -302,6 +319,9 @@ star {
 
 img.campaign-logo {
 	margin-bottom: 3.5rem;
+	@media screen and ($iphone) {
+		font-size: 1.5rem;
+	}
 }
 
 .uniform__potty {
