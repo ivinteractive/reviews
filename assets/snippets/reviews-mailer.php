@@ -132,7 +132,7 @@
             </tr>
             <?php if($page->email_type()->value() === 'skip'): ?>
               <tr style="background-color:#FFFFFF;">
-                <th class="column-empty2" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="20"></th>
+                <?= clearSpace(false, false, 20, false); ?>
               </tr>
               <tr style="background-color:#FFFFFF;">
                 <td colspan="3">
@@ -151,7 +151,7 @@
                               <td class="p0-20-20" style="padding: 0px 0px 20px 0px;">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                   <tr>
-                                    <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-empty" width="40" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
                                     <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <!-- Button -->
@@ -173,7 +173,7 @@
                                         <!-- END Button -->
                                       </table>
                                     </th>
-                                    <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-empty" width="40" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
                                     <th class="column-top" width="315" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <!-- Button -->
@@ -195,7 +195,7 @@
                                         <!-- END Button -->
                                       </table>
                                     </th>
-                                    <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                    <th class="column-empty" width="40" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
                                   </tr>
                                 </table>
                               </td>
@@ -217,7 +217,7 @@
                 </td>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <th class="column-empty2" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="20"></th>
+                <?= clearSpace(false, false, 20, false); ?>
               </tr>
             <?php else: ?>
               <tr style="background-color:#FFFFFF;">
