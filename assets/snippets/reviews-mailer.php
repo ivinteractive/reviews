@@ -169,9 +169,9 @@
                                             <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
                                               <span class="link-u" style="color:#4AA922; text-decoration:underline;">
                                                 <!--[if (gte mso 9)|(IE)]>
-                                                <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922;text-decoration:underline;">
+                                                <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]" style="color:#4AA922;text-decoration:underline;">
                                                 <![endif]-->
-                                                  <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.<span style="display:inline-block;font-size:20px;text-decoration:none;">&nbsp;</span>
+                                                  <span style="display:inline-block;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.
                                                 <!--[if (gte mso 9)|(IE)]>
                                                 </a>
                                                 <![endif]-->
@@ -193,7 +193,7 @@
                                                 <!--[if (gte mso 9)|(IE)]>
                                                 <a href="<?= $page->url()?>/feedback" style="color:#C7363B;text-decoration:underline;">
                                                 <![endif]-->
-                                                <span style="display:inline-block;font-size:20px;text-decoration:none;">&nbsp;</span>It could've been better.<span style="display:inline-block;font-size:20px;text-decoration:none;">&nbsp;</span>
+                                                  It could've been better.
                                                 <!--[if (gte mso 9)|(IE)]>
                                                 </a>
                                                 <![endif]-->
@@ -277,7 +277,7 @@
       <td width="16"></td>
       <td class="footer">
         <span style="color:#999999;font-size:0.65rem;"><?= $page->email_company()->value() ?></span>
-        <span style="color:#999999;font-size:0.65rem;">&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>" style="color:#999999;"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span style="color:#999999;font-size:0.65rem;"><?php if($page->contact_link()->isNotEmpty()): ?>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?= $page->contact_link()->value() ?>" style="color:#999999;"><?= $page->contact_text()->isNotEmpty()?$page->contact_text()->value():'Contact Us' ?></a><?php endif;?>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span style="color:#999999;font-size:0.65rem;"><unsubscribe>Unsubscribe</unsubscribe></span>
       </td>
       <td width="16"></td>
