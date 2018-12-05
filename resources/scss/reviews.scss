@@ -115,6 +115,9 @@ footer {
 		line-height: 1.25;
 		margin-bottom: 3.0625rem;
 	}
+	.feedback h2 {
+		margin-bottom: 1.75rem;
+	}
 }
 
 #_submit {
@@ -318,7 +321,7 @@ star {
 }
 
 img.campaign-logo {
-	margin-bottom: 3.5rem;
+	margin-bottom: 3.1875rem;
 	@media screen and ($iphone) {
 		font-size: 1.5rem;
 	}
