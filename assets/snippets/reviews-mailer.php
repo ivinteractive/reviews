@@ -32,10 +32,18 @@
     /* WEB FONTS */
     @media screen {}
     /* MOBILE STYLES WHERE SUPPORTED */
-    @media screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
       body[yahoo] .hide-mobile {display: none;}
       body[yahoo] br.hide-mobile {display: none;}
-      .rwd-break {display: inline;}
+      br.hide-mobile {display: none;}
+      .hide-mobile {display: none;}
+    }
+
+    @media only screen and (min-width: 600px) {
+      .break-desktop {
+        width:100%;
+        display: block !important;
+      }
     }
 
     /* Linked Styles */
@@ -46,8 +54,6 @@
 		body[yahoo] .mcnPreviewText { display: none !important; }
 
     .column-empty2 { padding-bottom: 20px !important; }
-
-    .rwd-break {display: block;}
 
 		/* Mobile styles */
 		@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
