@@ -161,7 +161,7 @@
                                                 <!--[if (gte mso 9)|(IE)]>
                                                 <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922;text-decoration:underline;">
                                                 <![endif]-->
-                                                  <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.
+                                                  <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.<span style="display:inline-block;font-size:20px;text-decoration:none;">&nbsp;</span>
                                                 <!--[if (gte mso 9)|(IE)]>
                                                 </a>
                                                 <![endif]-->
@@ -177,13 +177,13 @@
                                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <!-- Button -->
                                         <tr>
-                                          <td class="text-link" style="color:#C7363B;font-size:1rem;line-height:28px;font-weight:600;font-family:'Source Sans Pro',sans-serif;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
+                                          <td class="text-link" style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
                                             <a href="<?= $page->url()?>/feedback" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
                                               <span class="link-u" style="color:#C7363B;text-decoration:underline;">
                                                 <!--[if (gte mso 9)|(IE)]>
                                                 <a href="<?= $page->url()?>/feedback" style="color:#C7363B;text-decoration:underline;">
                                                 <![endif]-->
-                                                It could've been better.
+                                                <span style="display:inline-block;font-size:20px;text-decoration:none;">&nbsp;</span>It could've been better.<span style="display:inline-block;font-size:20px;text-decoration:none;">&nbsp;</span>
                                                 <!--[if (gte mso 9)|(IE)]>
                                                 </a>
                                                 <![endif]-->
