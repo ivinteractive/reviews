@@ -159,7 +159,7 @@
                                             <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
                                               <span class="link-u" style="color:#4AA922; text-decoration:underline;">
                                                 <!--[if (gte mso 9)|(IE)]>
-                                                <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922">
+                                                <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]"  style="color:#4AA922;text-decoration:underline;">
                                                 <![endif]-->
                                                   <span style="display:inline-block;font-size:20px;margin-right:10px;color:#FFC83D">👍</span>I liked it. Thank you.
                                                 <!--[if (gte mso 9)|(IE)]>
@@ -181,7 +181,7 @@
                                             <a href="<?= $page->url()?>/feedback" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
                                               <span class="link-u" style="color:#C7363B;text-decoration:underline;">
                                                 <!--[if (gte mso 9)|(IE)]>
-                                                <a href="<?= $page->url()?>/feedback" style="color:#C7363B">
+                                                <a href="<?= $page->url()?>/feedback" style="color:#C7363B;text-decoration:underline;">
                                                 <![endif]-->
                                                 It could've been better.
                                                 <!--[if (gte mso 9)|(IE)]>
