@@ -44,6 +44,7 @@
 		body[yahoo] img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
 		body[yahoo] .mcnPreviewText { display: none !important; }
 
+    .column-empty2 { padding-bottom: 20px !important; }
 
 		/* Mobile styles */
 		@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
@@ -60,7 +61,7 @@
 
 			.m-br-15 { height: 15px !important; }
 			.p30-15 { padding: 30px 15px !important; }
-			.p0-15-30 { padding: 0px 15px 30px 15px !important; }
+			.p0-20-20 { padding: 0px 20px 20px 20px !important; }
 			.p0-15 { padding: 0px 15px !important; }
 			.mpb30 { padding-bottom: 30px !important; }
 			.mpb15 { padding-bottom: 15px !important; }
@@ -79,7 +80,7 @@
 			.column-empty2,
 			.column-dir-top { float: left !important; width: 100% !important; display: block !important; }
 
-			.column-empty { padding-bottom: 30px !important; }
+			.column-empty { padding-bottom: 20px !important; }
 			.column-empty2 { padding-bottom: 10px !important; }
 
 			.content-spacing { width: 15px !important; }
@@ -131,7 +132,7 @@
             </tr>
             <?php if($page->email_type()->value() === 'skip'): ?>
               <tr style="background-color:#FFFFFF;">
-                <?= clearSpace(false, false, 40, false); ?>
+                <th class="column-empty2" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="20"></th>
               </tr>
               <tr style="background-color:#FFFFFF;">
                 <td colspan="3">
@@ -144,10 +145,10 @@
                   <table width="100%" style="max-width:616px" border="0" cellspacing="0" cellpadding="0">
                     <tbody>
                       <tr>
-                        <td style="padding-bottom: 40px;">
+                        <td>
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                              <td class="p0-15-30" style="padding: 0px 0px 40px 0px;">
+                              <td class="p0-20-20" style="padding: 0px 0px 20px 0px;">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                   <tr>
                                     <th class="column-empty" width="20" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
@@ -216,7 +217,7 @@
                 </td>
               </tr>
               <tr style="background-color:#FFFFFF;">
-                <?= clearSpace(false, false, 20, false); ?>
+                <th class="column-empty2" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;" width="20"></th>
               </tr>
             <?php else: ?>
               <tr style="background-color:#FFFFFF;">
