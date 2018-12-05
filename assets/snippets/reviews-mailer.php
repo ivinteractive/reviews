@@ -48,7 +48,6 @@
 
     /* Linked Styles */
 		body[yahoo] { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f8f8f8; -webkit-text-size-adjust:none }
-		body[yahoo] a { color:#0000ee; text-decoration:none }
 		body[yahoo] p { padding:0 !important; margin:0 !important }
 		body[yahoo] img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
 		body[yahoo] .mcnPreviewText { display: none !important; }
@@ -244,7 +243,7 @@
                 <tr>
                 <td>
                 <![endif]-->
-                <table width="100%" style="max-width: 475px" align="center">
+                <table width="100%" style="max-width: 400px" align="center">
                   <tbody>
                     <tr>
                       <td><?= $page->email_text()->kt() ?></td>
