@@ -190,7 +190,7 @@ function setErrors(form, errors) {
 function trackEvent(campaign,action,label,value) {
 	value = typeof value !== 'undefined' ? value : '0';
 	if(typeof ga==='undefined') {
-	console.log(label);
+		console.log(label);
 	} else {
 		if ("ga" in window) {
 			tracker = ga.getAll()[0];

@@ -12,7 +12,7 @@
     $gtm_script = '';
     $gtm_no_script = '';
 
-    if ($gtm_code) {
+    if ($gtm_code) {  
       $gtm_script.= "<!-- Google Tag Manager -->";
       $gtm_script.= "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':";
       $gtm_script.= "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],";
