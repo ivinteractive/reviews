@@ -18,8 +18,8 @@ fields:
   title:
     label: Title
     type: text
-  gtm_code:
-    label: Google Tag Manager Code
+  ga_code:
+    label: Google Analytics Code
     type: text
   homepage_url:
     label: Homepage URL

@@ -8,33 +8,26 @@
   <?= $css ?>
   <?php
 
-    $gtm_code = $campaign_page && $campaign_page->gtm_code()->isNotEmpty()?$campaign_page->gtm_code()->value():false;
-    $gtm_script = '';
-    $gtm_no_script = '';
+    $ga_code = $campaign_page && $campaign_page->ga_code()->isNotEmpty()?$campaign_page->ga_code()->value():false;
+    $ga_script = '';
 
-    if ($gtm_code) {  
-      $gtm_script.= "<!-- Google Tag Manager -->";
-      $gtm_script.= "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':";
-      $gtm_script.= "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],";
-      $gtm_script.= "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=";
-      $gtm_script.= "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);";
-      $gtm_script.= "})(window,document,'script','dataLayer','".$gtm_code."');</script>";
-      $gtm_script.= "<!-- End Google Tag Manager -->";
-
-      $gtm_no_script.= '<!-- Google Tag Manager (noscript) -->';
-      $gtm_no_script.= '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id='.$gtm_code.'"';
-      $gtm_no_script.= 'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>';
-  		$gtm_no_script.= '<!-- End Google Tag Manager (noscript) -->';
+    if ($ga_code) {
+      $ga_script.= "<!-- Global site tag (gtag.js) - Google Analytics -->";
+      $ga_script.= '<script async src="https://www.googletagmanager.com/gtag/js?id='.$ga_code.'"></script>';
+      $ga_script.= "<script>";
+      $ga_script.= "window.dataLayer = window.dataLayer || [];";
+      $ga_script.= "function gtag(){dataLayer.push(arguments);}";
+      $ga_script.= "gtag('js', new Date());";
+      $ga_script.= "gtag('config', 'UA-130443844-1');";
+      $ga_script.= "</script>";
     }
 
-    echo $gtm_script;
+    echo $ga_script;
 
   ?>
 </head>
 
 <body id="reviews">
-
-<?= $gtm_no_script ?>
 
 <header>
   <div class="container">
