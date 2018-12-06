@@ -1,3 +1,23 @@
+// Get query string values, from https://stackoverflow.com/questions/12049620/how-to-get-get-variables-value-in-javascript
+var $_GET = {};
+if(document.location.toString().indexOf('?') !== -1) {
+    var query = document.location
+                   .toString()
+                   // get the query string
+                   .replace(/^.*?\?/, '')
+                   // and remove any existing hash string (thanks, @vrijdenker)
+                   .replace(/#.*$/, '')
+                   .split('&');
+
+    for(var i=0, l=query.length; i<l; i++) {
+       var aux = decodeURIComponent(query[i]).split('=');
+       $_GET[aux[0]] = aux[1];
+    }
+}
+
+
+
+
 /*=============================
 =         Star Effects        =
 =============================*/
@@ -51,15 +71,15 @@ function clickStar(e) {
 var links = document.querySelectorAll('a:not(#external-review-link)');
 for (var i = 0; i < links.length; i++) {
 	links[i].addEventListener('click', function(e) {
-		trackEvent('Outbound Link', 'Link Click', e.currentTarget.innerText, '');
+		trackEvent('Outbound Link', 'Link Click', e.currentTarget.innerText, '0');
 	});
 }
 
 var externalReviewLink = document.getElementById('external-review-link');
 if (externalReviewLink) {
 	externalReviewLink.addEventListener('click', function(e) {
-		var linkText = e.currentTarget.innerText.split(" ");
-		trackEvent('Exit To Review Site', 'CTA Button Click', linkText[linkText.length - 1], '');
+		var linkID = $_GET['link_id']!==''&&$_GET['link_id']!=='[link_id]'?$_GET['link_id']:'texas-medical-center-google';
+		trackEvent('Exit To Review Site', 'CTA Button Click', linkID, '0');
 	});
 }
 
