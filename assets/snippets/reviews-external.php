@@ -7,7 +7,7 @@
       <?= $campaign_page->high_text()->kt() ?>
       <div id="wrapper">
 
-				<a class="button" id="external-review-link" href="<?= $externalReview->link()->value() ?>" target="_blank" onclick="externalClicked()">
+				<a class="button" id="external-review-link" href="<?= $externalReview->link()->value() ?>" target="_blank">
           <span>Review us on <?= $externalReview->button_label()->value()?></span>
         </a>
 				<?= $campaign_page->text()->kt(); ?>

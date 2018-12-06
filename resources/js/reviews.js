@@ -101,11 +101,12 @@ function formSubmit(e) {
 		type: 'json',
 		data: data,
 		success: function(r) {
-			if (r.errors) {
+			console.log(r.errors);
+			if (r.errors && Object.keys(r.errors).length > 0) {
 				setErrors(form, r.errors);
 				trackEvent('Negative Feedback Form', 'Form Submit', campaign_title, '0');
 			}
-			if(r.message && r.errors.length <= 0) {
+			if(r.message && r.errors.length == 0) {
 				document.getElementById('wrapper').innerHTML = r.message;
 				trackEvent('Negative Feedback Form', 'Form Submit', campaign_title, '1');
 			}
@@ -167,10 +168,10 @@ function randomString(token) {
 	return token + randomstring;
 }
 
-function externalClicked() {
-	document.getElementById('clicked').value = '1';
-	form.dispatchEvent(new Event('submit'));
-}
+// function externalClicked() {
+// 	document.getElementById('clicked').value = '1';
+// 	form.dispatchEvent(new Event('submit'));
+// }
 
 function setErrors(form, errors) {
 	var current = form.querySelectorAll('.error');
