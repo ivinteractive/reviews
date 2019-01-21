@@ -34,10 +34,10 @@ if(!c::get('reviews-tag')) {
 			$content = '';
 			$reviews = $db->where(['display' => '1'])->all();
 			foreach($reviews as $review) {
-		        $stars = '';
-		        for($i=1; $i<=5; $i++) {
-		          $stars.= brick('i', false, ['class' => 'fa fa-star'.r($i > $review->rating, '-o')]);
-		        }
+				$stars = '';
+				for($i=1; $i<=5; $i++) {
+					$stars.= brick('i', false, ['class' => 'fa fa-star'.r($i > $review->rating, '-o')]);
+				}
 
 				$content.= brick('div', brick('div', $stars, ['class' => 'star-container']).brick('div', $review->message), ['class' => 'review']);
 			}
@@ -47,15 +47,18 @@ if(!c::get('reviews-tag')) {
 }
 
 // Set up snippets
-if(!c::get('reviews-email-snippet')) {
-	$kirby->set('snippet', 'reviews-email', __DIR__ . DS . 'assets' . DS . 'snippets' . DS . 'reviews-email.php');
+$snippets_dir = __DIR__ . DS . 'assets' . DS . 'snippets';
+$snippets = scandir($snippets_dir);
+foreach ($snippets as $snippet):
+	$snippet_details = pathinfo($snippets_dir . DS . $snippet);
+	if($snippet_details['extension'] === 'php') {
+		$kirby->set('snippet', $snippet_details['filename'], $snippets_dir . DS . $snippet);
+	}
+endforeach;
+
+if(c::get('reviews-email-snippet')) {
+	$kirby->set('snippet', 'reviews-email', c::get('reviews-email-snippet'));
 }
-$kirby->set('snippet', 'reviews-header', __DIR__ . DS . 'assets' . DS . 'snippets' . DS . 'reviews-header.php');
-$kirby->set('snippet', 'reviews-footer', __DIR__ . DS . 'assets' . DS . 'snippets' . DS . 'reviews-footer.php');
-$kirby->set('snippet', 'reviews-stars', __DIR__ . DS . 'assets' . DS . 'snippets' . DS . 'reviews-stars.php');
-$kirby->set('snippet', 'reviews-feedback', __DIR__ . DS . 'assets' . DS . 'snippets' . DS . 'reviews-feedback.php');
-$kirby->set('snippet', 'reviews-external', __DIR__ . DS . 'assets' . DS . 'snippets' . DS . 'reviews-external.php');
-$kirby->set('snippet', 'reviews-mailer', __DIR__ . DS . 'assets' . DS . 'snippets' . DS . 'reviews-mailer.php');
 
 if(!c::get('review-button')) {
 	$kirby->set('tag', 'review-button', [

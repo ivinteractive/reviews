@@ -25,6 +25,15 @@ fields:
   homepage_url:
     label: Homepage URL
     type: text
+  external_template:
+    label: External Review Link Template
+    type: select
+    options:
+      one-button: One Button
+      two-buttons: Two Buttons
+  facebook_link:
+    label: Facebook Link
+    type: text
   hero:
     label: Hero Image (JPG, PNG)
     type: image
@@ -61,6 +70,12 @@ fields:
     label: Email
     type:  tabs
     icon: envelope-o
+  email_template:
+    label: Email Template
+    type: select
+    options:
+      default: 'Default (Side by side links)'
+      vertical-centered: 'Vertical Centered'
   email_company:
     label: Company Name
     type: text
