@@ -126,6 +126,16 @@ footer {
 	margin-bottom: 0.375rem;
 }
 
+.feedback.two-buttons {
+	#_submit {
+		background-color: #C7282C;
+		text-transform: capitalize;
+		font-size: 1.0625rem;
+		text-decoration: underline;
+		font-weight: 500;
+	}
+}
+
 .review-buttons {
 	margin-bottom: 2.625rem;
 	display: flex;
@@ -193,7 +203,7 @@ footer {
 	background-color: #3A599A;
 	border-bottom: 0.125rem solid #314C83;
 	&:hover {
-		background-color: #3A599A;
+		background-color: #314C83;
 	}
 }
 

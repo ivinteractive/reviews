@@ -9,8 +9,8 @@
     <tr style="background-color:#FFFFFF;">
       <td width="16"></td>
       <td>
-        <h3 style="font-size:1.5rem;font-family:'Source Sans Pro',sans-serif;font-weight:300;color:#000000;">Thanks for your visit!</h3>
-        <h1<?= $page?'':' class="error"'?> style="font-size:2.125rem;line-height:1.45em;font-family:'Source Sans Pro',sans-serif">
+        <h3 style="font-size:1.5rem;font-family:Helvetica,Arial,sans-serif;font-weight:400;color:#000000;">Thanks for your visit!</h3>
+        <h1<?= $page?'':' class="error"'?> style="font-size:2.125rem;line-height:1.35em;font-family:Helvetica,Arial,sans-serif;margin-bottom:1.25rem;">
           <?= $page?$page->review_title()->value():'Page template is empty'; ?>
         </h1>
       </td>
@@ -19,7 +19,7 @@
     <tr style="background-color:#FFFFFF;">
       <td width="16"></td>
       <td>
-        <?= $page?'<h2 style="font-size:0.875rem;color:#525252;font-family:\'Source Sans Pro\',sans-serif;line-height:1.25;">'.$page->review_subtitle()->value().'</h2>':''; ?>
+        <?= $page?'<div style="font-size:0.875rem;color:#525252;font-family:Helvetica,Arial,sans-serif;line-height:1.25;font-weight:400">'.$page->review_subtitle()->value().'</div>':''; ?>
       </td>
       <td width="16"></td>
     </tr>
@@ -37,7 +37,7 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 269px;">
             <!-- Button -->
             <tr>
-              <td class="text-link" style="color:#4AA922;font-size:1.125rem;font-weight:500;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
+              <td class="text-link" style="color:#4AA922;font-size:1.125rem;font-weight:600;font-family:Helvetica,Arial,sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
                 <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
                   <span class="link-u" style="color:#4AA922;text-decoration:underline;">
                     <!--[if (gte mso 9)|(IE)]>
@@ -96,7 +96,7 @@
       <?= clearSpace(false, 20); ?>
     </tr>
     <tr style="background-color:#FFFFFF;">
-      <?= clearSpace(false, false, 20, false); ?>
+      <?= clearSpace(false, false, 35, false); ?>
     </tr>
     <tr style="background-color:#FFFFFF;">
       <td colspan="3">
@@ -108,7 +108,7 @@
         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 269px;">
           <!-- Button -->
           <tr>
-            <td class="text-link" style="color:#C7363B;font-size:1.125rem;font-weight:500;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
+            <td class="text-link" style="color:#C7363B;font-size:1.125rem;font-weight:600;font-family:Helvetica,Arial,sans-serif;line-height:28px;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
               <a href="<?= $page->url()?>/feedback" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
                 <span class="link-u" style="color:#C7363B;text-decoration:underline;">
                   <!--[if (gte mso 9)|(IE)]>

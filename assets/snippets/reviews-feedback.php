@@ -1,7 +1,7 @@
 <?php snippet('reviews-header', ['campaign_page'=>$campaign_page,'css'=>$css,'hero'=>$hero]) ?>
 
 
-<main class="feedback">
+<main class="feedback <?= $campaign_page->external_template() ?>">
   <div class="container">
     <form action="<?= url('reviews-process/'.$campaign_page->slug()) ?>" method="post" id="reviews-form">
       <?= $campaign_page->low_text()->kt() ?>
