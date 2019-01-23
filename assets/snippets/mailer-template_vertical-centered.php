@@ -61,7 +61,7 @@
         </td>
       </tr>
       <tr style="background-color:#FFFFFF;">
-        <?= clearSpace(false, false, 40, false); ?>
+        <?= clearSpace(false, false, 50, false); ?>
       </tr>
     <?php else: ?>
       <tr style="background-color:#FFFFFF;">
@@ -96,7 +96,7 @@
       <?= clearSpace(false, 20); ?>
     </tr>
     <tr style="background-color:#FFFFFF;">
-      <?= clearSpace(false, false, 35, false); ?>
+      <?= clearSpace(false, false, 30, false); ?>
     </tr>
     <tr style="background-color:#FFFFFF;">
       <td colspan="3">
