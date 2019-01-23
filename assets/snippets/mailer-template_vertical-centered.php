@@ -37,9 +37,9 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 269px;">
             <!-- Button -->
             <tr>
-              <td class="text-link" style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
+              <td class="text-link" style="color:#4AA922;font-size:1.125rem;font-weight:500;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
                 <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
-                  <span class="link-u" style="color:#4AA922; text-decoration:underline;">
+                  <span class="link-u" style="color:#4AA922;text-decoration:underline;">
                     <!--[if (gte mso 9)|(IE)]>
                     <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]" style="color:#4AA922;text-decoration:underline;">
                     <![endif]-->
@@ -61,7 +61,7 @@
         </td>
       </tr>
       <tr style="background-color:#FFFFFF;">
-        <?= clearSpace(false, false, 30, false); ?>
+        <?= clearSpace(false, false, 40, false); ?>
       </tr>
     <?php else: ?>
       <tr style="background-color:#FFFFFF;">
@@ -108,7 +108,7 @@
         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 269px;">
           <!-- Button -->
           <tr>
-            <td class="text-link" style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
+            <td class="text-link" style="color:#C7363B;font-size:1.125rem;font-weight:500;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
               <a href="<?= $page->url()?>/feedback" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
                 <span class="link-u" style="color:#C7363B;text-decoration:underline;">
                   <!--[if (gte mso 9)|(IE)]>
