@@ -17,6 +17,7 @@
     body[yahoo] { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
     body[yahoo] h2 { font-size: 1.4rem; font-family: 'Source Sans Pro', sans-serif; color: #797979; font-weight: 300; line-height: 1.25; }
     body[yahoo] p { margin:0; font-size: 1rem; }
+    body[yahoo] td.footer p { font-size: 0.65rem; }
     a[x-apple-data-detectors] {
       color: inherit !important;
       text-decoration: none !important;
