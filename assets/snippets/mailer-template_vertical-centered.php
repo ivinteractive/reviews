@@ -19,7 +19,7 @@
     <tr style="background-color:#FFFFFF;">
       <td width="16"></td>
       <td>
-        <?= $page?'<div style="font-size:0.875rem;color:#525252;font-family:Helvetica,Arial,sans-serif;line-height:1.25;font-weight:400">'.$page->review_subtitle()->value().'</div>':''; ?>
+        <?= $page?'<div style="font-size:1rem;color:#525252;font-family:Helvetica,Arial,sans-serif;line-height:1.25;font-weight:400">'.$page->review_subtitle()->value().'</div>':''; ?>
       </td>
       <td width="16"></td>
     </tr>
