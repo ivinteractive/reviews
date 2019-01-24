@@ -234,7 +234,7 @@ footer {
 	}
 	#external-review-link,
 	#facebook-review-link {
-		width: 100%;
+		width: calc(100% - 5rem);
 		max-width: 15rem;
 		span {
 			border-color: #FFFFFF;
