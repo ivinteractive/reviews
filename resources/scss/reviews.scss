@@ -240,6 +240,13 @@ footer {
 			border-color: #FFFFFF;
 		}
 	}
+
+	@media screen and (max-width: 379px) {
+		#external-review-link,
+		#facebook-review-link {
+			font-size: 0.9rem;
+		}
+	}
 }
 
 .container, footer {
