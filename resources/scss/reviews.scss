@@ -199,7 +199,7 @@ footer {
 	margin-bottom: 2.8125rem;
 	border-bottom: 0.125rem solid #286BD1;
 	font-size: 1.125rem;
-	text-transform: capitalize;
+	text-transform: unset;
 	font-weight: 600;
 	padding: 0.65rem 2rem;
 	border-radius: 3.125rem;
@@ -231,7 +231,7 @@ footer {
 		font-family:'Source Sans Pro',sans-serif;
 	}
 	h2 {
-		color: #525252;
+		color: #000000;
 		margin-bottom: 2.063rem;
 	}
 	#external-review-link {

@@ -9,8 +9,8 @@
     <tr style="background-color:#FFFFFF;">
       <td width="16"></td>
       <td>
-        <h3 style="font-size:1.5rem;font-family:Helvetica,Arial,sans-serif;font-weight:400;color:#000000;">Thanks for your visit!</h3>
-        <h1<?= $page?'':' class="error"'?> style="font-size:2.125rem;line-height:1.35em;font-family:Helvetica,Arial,sans-serif;margin-bottom:1.25rem;">
+        <h3 style="font-size:1.5rem;font-family:Helvetica,Arial,sans-serif;font-weight:300;color:#000000;">Thanks for your visit!</h3>
+        <h1<?= $page?'':' class="error"'?> style="font-size:2rem;line-height:1.4em;font-family:Helvetica,Arial,sans-serif;margin-bottom:1.25rem;font-weight:300;">
           <?= $page?$page->review_title()->value():'Page template is empty'; ?>
         </h1>
       </td>
