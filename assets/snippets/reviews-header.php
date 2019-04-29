@@ -8,7 +8,15 @@
   <?= $css ?>
   <?php
 
-    $ga_code = $campaign_page && $campaign_page->ga_code()->isNotEmpty()?$campaign_page->ga_code()->value():false;
+    $config_page = page(c::get('reviews-dir', 'reviews'));
+
+    if($campaign_page && $campaign_page->ga_code()->isNotEmpty()) {
+      $ga_code = $campaign_page->ga_code()->value();
+    } elseif ($config_page && $config_page->ga_code()->isNotEmpty()) {
+      $ga_code = $config_page->ga_code()->value();
+    } else {
+      $ga_code = false;
+    }
     $ga_script = '';
 
     if ($ga_code) {
