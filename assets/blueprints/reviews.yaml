@@ -108,6 +108,15 @@ fields:
     label: Configuration
     type:  tabs
     icon: gear
+  saves_in:
+    label: Saves in
+    type: radio
+    icon: floppy-o
+    options:
+      database: Database
+      portal: Web leads portal
+    default: database
+    required: true
   min_rating:
     label: Minimum Rating
     type: select
