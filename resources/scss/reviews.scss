@@ -1,4 +1,5 @@
 $xs: "max-width: 767px";
+$mobile: "max-width: 439px";
 $iphone: "max-width: 320px";
 
 body {
@@ -20,21 +21,26 @@ h1 {
 	margin: 0 0 1rem;
 }
 
+.hide-mobile {
+	@media screen and ($mobile) {
+		display: none;
+	}
+}
 
 /*=============================
 =         Reviews Page        =
 =============================*/
 
 body#reviews {
-	background: #f8f8f8;
+	background: #F8F8F8;
 	padding: 5rem 0;
 
 	form {
-		background: #fff;
+		background: #FFFFFF;
 		text-align: center;
-		padding: 5rem;
+		padding: 3rem 5rem 1.5rem;
 		margin: 0 auto;
-	    border: 1px solid #eee;
+		border: 1px solid #EEEEEE;
 	}
 
 	@media screen and ($xs) {
@@ -44,27 +50,207 @@ body#reviews {
 			padding: 2.25rem 1.75rem;
 		}
 	}
+	@media screen and ($mobile) {
+		padding: 1.125rem 0;
+		form {
+			padding: 2.25rem 1.25rem;
+		}
+	}
+}
+
+#form-message {
+	padding: 2rem;
+	border: 1px solid;
+	font-size: 1.35rem;
+	&.success {
+		color: #139F13;
+		background: rgba(108,182,108,0.101);
+	}
+	&.error {
+		color: #DD0000;
+		background: rgba(227,149,149,0.2);
+	}
 }
 
 header {
-	margin: 0 0 3rem;
+	margin: 0;
 }
 
-main {
+header,
+main,
+footer {
 	@media screen and ($xs) {
 		padding: 0 1.5rem;
 	}
-	@media screen and ($iphone) {
+	@media screen and ($mobile) {
 		padding: 0 1.25rem;
 	}
 }
 
-#reviews h1 {
-	margin: 0 1rem 1rem;
+#hero {
+	a {
+		display: block;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
 
-	@media screen and ($xs) {
-		font-size: 1.75rem;
+#wrapper {
+	margin-bottom: 2.6875rem;
+}
+
+#reviews {
+	h1 {
 		margin: 0 0 1rem;
+		font-size: 2.4rem;
+
+		&.error {
+			color: #DD0000;
+			text-align: center;
+		}
+
+		@media screen and ($xs) {
+			font-size: 1.75rem;
+			margin: 0 0 1rem;
+		}
+	}
+	h2 {
+		color: #000000;
+		font-weight: 300;
+		line-height: 1.25;
+		margin-bottom: 3.0625rem;
+	}
+	.feedback h2 {
+		margin-bottom: 1.75rem;
+	}
+}
+
+#_submit {
+	margin-bottom: 0.375rem;
+}
+
+.external-review.two-buttons {
+	font-family: Helvetica, Arial, sans-serif;
+	#external-review-link,
+	#facebook-review-link {
+		font-size: 1rem;
+	}
+	p {
+		font-size: 0.85rem;
+		line-height: 1.65em;
+	}
+}
+
+.feedback.two-buttons {
+	font-family: Helvetica, Arial, sans-serif;
+	#_submit {
+		background-color: #C7282C;
+		text-transform: capitalize;
+		font-size: 1.0625rem;
+		text-decoration: underline;
+		font-weight: 500;
+	}
+}
+
+.review-buttons {
+	margin-bottom: 2.625rem;
+	display: flex;
+	justify-content: space-between;
+	a, button {
+		border-radius: 0;
+		text-transform: capitalize;
+		font-size: 0.895rem;
+		font-weight: 600;
+		border: 0.0625rem solid;
+		padding: 0.75rem 1.75rem;
+		display: inline-block;
+		text-decoration: none;
+		transition: background-color .25s, color .5s;
+		span {
+			border-bottom: 0.0625rem solid;
+		}
+		&.green {
+			color: #4AA922;
+			border-color: rgba(74,169,34,0.65);
+			background-color: rgba(74,169,34,0.05);
+			&:hover {
+				background-color: #4AA922;
+				color: #FFFFFF;
+			}
+		}
+		&.red {
+			color: #C7363B;
+			border-color: rgba(199,54,59,0.65);
+			background-color: rgba(199,54,59,0.05);
+			&:hover {
+				background-color: #C7363B;
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+#external-review-link,
+#facebook-review-link {
+	border-radius: 0;
+	background-color: #4E86FA;
+	margin-bottom: 2.8125rem;
+	border-bottom: 0.125rem solid #286BD1;
+	font-size: 1.125rem;
+	text-transform: unset;
+	font-weight: 600;
+	padding: 0.65rem 2rem;
+	border-radius: 3.125rem;
+	transition: background-color .25s;
+	span {
+		border-bottom: 0.0625rem solid transparent;
+		transition: border-color .25s;
+	}
+	&:hover {
+		cursor: pointer;
+		background-color: #286bd1;
+		span {
+			border-color: #FFFFFF;
+		}
+	}
+}
+
+#facebook-review-link {
+	background-color: #3A599A;
+	border-bottom: 0.125rem solid #314C83;
+	&:hover {
+		background-color: #314C83;
+	}
+}
+
+#reviews .external-review.two-buttons {
+	h1 {
+		font-size: 2.65rem;
+		font-family:'Source Sans Pro',sans-serif;
+	}
+	h2 {
+		color: #000000;
+		margin-bottom: 2.063rem;
+	}
+	#external-review-link {
+		margin-bottom: 1.25rem;
+	}
+	#external-review-link,
+	#facebook-review-link {
+		width: calc(100% - 5rem);
+		max-width: 15rem;
+		span {
+			border-color: #FFFFFF;
+		}
+	}
+
+	@media screen and (max-width: 379px) {
+		#external-review-link,
+		#facebook-review-link {
+			font-size: 0.9rem;
+		}
 	}
 }
 
@@ -74,20 +260,27 @@ main {
 }
 
 .field {
-    margin-bottom: 1rem;
-    text-align: left;
-
+	margin-bottom: 1rem;
+	text-align: left;
+	&.error {
+		label {
+			color: #DD0000;
+		}
+		input, textarea {
+			border: 1px solid #DD0000;
+		}
+	}
 	@media screen and ($xs) {
 		&:nth-of-type(1) {
 			margin-top: 2rem;
 		}
-    }
+	}
 }
 
 label {
 	display: block;
 	font-size: .875rem;
-    margin-bottom: .5rem;
+	margin-bottom: .5rem;
 }
 
 input:not([type=checkbox]), textarea {
@@ -95,29 +288,29 @@ input:not([type=checkbox]), textarea {
 	font-size: 1rem;
 	outline: none;
 	display: block;
-    width: 100%;
-    border: 1px solid #ceced0;
-    border-radius: 0;
-    background: #fdfdfd;
-    -webkit-transition: border-color .25s;
-    transition: border-color .25s;
-    -moz-appearance: none;
-    appearance: none;
-    -webkit-appearance: none;
-    box-sizing : border-box;
+	width: 100%;
+	border: 1px solid #ceced0;
+	border-radius: 0;
+	background: #fdfdfd;
+	-webkit-transition: border-color .25s;
+	transition: border-color .25s;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-appearance: none;
+	box-sizing : border-box;
 }
 
 input:not([type=checkbox]) {
-    height: 2.5rem;
-    padding: 0 .875rem;
+	height: 2.5rem;
+	padding: 0 .875rem;
 }
 
 textarea {
 	height: 7.8125rem;
 	max-width: 100%;
-    resize: none;
-    padding: .875rem;
-    margin-bottom: 3rem;
+	resize: none;
+	padding: .875rem;
+	margin-bottom: 3rem;
 }
 
 p {
@@ -134,21 +327,21 @@ p {
 
 button, .button {
 	color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
+	text-transform: uppercase;
+	text-decoration: none;
 	font-weight: 700;
-    border: 0;
-    border-radius: 30px;
-    font-size: .875rem;
-    padding: 1rem 2rem;
-    -webkit-transition: background .15s;
-    transition: background .15s;
-    cursor: pointer;
+	border: 0;
+	border-radius: 30px;
+	font-size: .875rem;
+	padding: 1rem 2rem;
+	-webkit-transition: background .15s;
+	transition: background .15s;
+	cursor: pointer;
 	background-color: #2ecc71;
 
-    &:hover {
-    	background-color: #27ae60;
-    } 
+	&:hover {
+		background-color: #27ae60;
+	}
 }
 
 .button {
@@ -194,18 +387,53 @@ star {
 	}
 }
 
+.logo a {
+	display: block;
+	margin-bottom: 1.5625rem;
+}
+
+img.campaign-logo {
+	@media screen and ($mobile) {
+		font-size: 1.5rem;
+	}
+}
+
 .uniform__potty {
 	position: absolute !important;
 	top: -9999px;
-    left: -9999px;
+	left: -9999px;
 }
 
 footer {
-	color: #999;
+	color: #999999;
 	text-align: center;
-	margin-top: 5rem;
-	padding-top: 2rem;
-	border-top: 1px solid #eee;
+	margin-top: 3rem;
+	font-size: 0.75rem;
+
+	.footer-text {
+		margin-bottom: 1.25rem;
+	}
+	.iv-logo {
+		color: #D7D7D7;
+		padding: 0.5rem 0;
+		margin-bottom: 1rem;
+		span {
+			position: relative;
+			&::before {
+				content: '';
+				background-image: url('/assets/images/ivi-reviews-logo.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: absolute;
+				width: 1rem;
+				height: 1rem;
+				display: block;
+				top: 50%;
+				left: -1.25rem;
+				transform: translateY(-50%);
+			}
+		}
+	}
 
 	@media screen and ($xs) {
 		margin-top: 3rem;
