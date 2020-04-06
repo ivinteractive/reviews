@@ -113,14 +113,21 @@ kirby()->routes([
 				$sender_name = getCampaignField('feedback_sender_name',$campaign_page,$page);
 				$sender_email = getCampaignField('feedback_sender',$campaign_page,$page);
 
-				$actions = [
-					[
+				if($campaign_page->saves_in()->value()==='portal')
+					$saveAction = [
+						'_action' => 'crm',
+					];
+				else
+					$saveAction = [
 						'_action' => 'db_insert',
 						'table'	  => 'reviews',
 						'nonSerts' => ['website','submit','min-rating','link_id'],
 						'spamLog' => r(get('website'), r::data(), false),
 						'where' => $existingReview ? ['id' => $existingReview->id] : null
-					],
+					];
+
+				$actions = [
+					$saveAction,
 					[
 						'_action' => 'email',
 						'subject' => $subject->value(),
