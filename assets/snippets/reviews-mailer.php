@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<style><?= file_get_contents(__DIR__ . DS . '..' . DS . 'css' . DS . 'email.css') ?></style>
+<style><?= file_get_contents(c::get('review.assets.css.email', __DIR__ . DS . '..' . DS . 'css' . DS . 'email.css')) ?></style>
 <?= $customCss ?>
 <style type="text/css">
     body[yahoo], body[yahoo] table, body[yahoo] td, body[yahoo] a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
