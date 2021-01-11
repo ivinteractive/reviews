@@ -2,14 +2,14 @@
 
 require_once(__DIR__ . DS . 'reviewsFunctions.php');
 
-$css = css('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+$css = css(c::get('review.assets.css.webfont', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'));
 $css.= css('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
-$css.= '<style>'.file_get_contents(__DIR__ . DS . '..' . DS .'assets' . DS . 'css' . DS . 'reviews.css').'</style>';
+$css.= '<style>'.file_get_contents(c::get('review.assets.css.reviews', __DIR__ . DS . '..' . DS .'assets' . DS . 'css' . DS . 'reviews.css')).'</style>';
 
 $customCss = customCss($page, $page);
 
 $js = '<script src="https://cdnjs.cloudflare.com/ajax/libs/reqwest/2.0.5/reqwest.min.js"></script>';
-$js.= '<script>'.file_get_contents(__DIR__ . DS . '..' . DS . 'assets' . DS . 'js' . DS . 'reviews.js').'</script>';
+$js.= '<script>'.file_get_contents(c::get('review.assets.js.reviews', __DIR__ . DS . '..' . DS . 'assets' . DS . 'js' . DS . 'reviews.js')).'</script>';
 
 kirby()->routes([
 	[
