@@ -17,7 +17,7 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <!-- Button -->
                       <tr>
-                        <td class="text-link" style="color:#4AA922;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
+                        <td class="text-link" style="color:#4AA922;font-size:1rem;font-weight:600;font-family: Helvetica, Arial, sans-serif;line-height:28px;text-align:center;background-color:#FAFDFA;padding:15px;border: 1px solid #A9DB94;">
                           <a href="<?= $page->url() ?>/leave-a-review?link_id=[link_id]" target="_blank" class="link-u" style="color:#4AA922; text-decoration:underline;">
                             <span class="link-u" style="color:#4AA922; text-decoration:underline;">
                               <!--[if (gte mso 9)|(IE)]>
@@ -39,7 +39,7 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <!-- Button -->
                       <tr>
-                        <td class="text-link" style="color:#C7363B;font-size:1rem;font-weight:600;font-family:'Source Sans Pro',sans-serif;line-height:28px;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
+                        <td class="text-link" style="color:#C7363B;font-size:1rem;font-weight:600;font-family: Helvetica, Arial, sans-serif;line-height:28px;text-align:center;background-color:#FEF9F9;padding:15px;border:1px solid #E88E93;">
                           <a href="<?= $page->url()?>/feedback" target="_blank" class="link-u" style="color:#C7363B; text-decoration:underline;">
                             <span class="link-u" style="color:#C7363B;text-decoration:underline;">
                               <!--[if (gte mso 9)|(IE)]>

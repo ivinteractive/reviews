@@ -105,7 +105,7 @@
 <table width="100%" align="center" class="content" style="max-width: 616px" cellpadding="0" cellspacing="0" border="0">
   <tbody>
     <tr>
-      <td width="100%" colspan="3" style="line-height:0;font-size:2.25rem;font-family:'Source Sans Pro',sans-serif;" cellpadding="0" cellspacing="0" border="0">
+      <td width="100%" colspan="3" style="line-height:0;font-size:2.25rem;font-family: Helvetica, Arial, sans-serif;" cellpadding="0" cellspacing="0" border="0">
         <a href="<?= $page->homepage_url()->isNotEmpty()?$page->homepage_url()->value():url() ?>"><?= $hero ?></a>
       </td>
     </tr>
