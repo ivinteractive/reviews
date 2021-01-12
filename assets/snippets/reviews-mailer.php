@@ -111,7 +111,7 @@
       </td>
     </tr>
     <tr>
-      <td width="100%" colspan="3" height="4" bgcolor="<?= $page->hero_border_color()->isNotEmpty()?$page->hero_border_color()->value():'#000000' ?>"></td>
+      <td width="100%" colspan="3" height="<?= c::get('review.campaign.mailer.borderHeight', 4) ?>" bgcolor="<?= $page->hero_border_color()->isNotEmpty()?$page->hero_border_color()->value():'#000000' ?>"></td>
     </tr>
     <tr>
       <td width="100%" colspan="3" style="background-color:#FFFFFF;border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE;border-bottom:1px solid #EEEEEE;">
