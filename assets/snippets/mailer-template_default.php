@@ -3,13 +3,13 @@
 <tr>
 <td>
 <![endif]-->
-<table align="center" width="100%" style="max-width: 616px" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0">
+<table align="center" width="100%" style="max-width: 616px" bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" border="0" class="email-main">
   <tbody>
     <tr style="background-color:#FFFFFF;"><?= clearSpace(3, false, 65, true); ?></tr>
     <tr style="background-color:#FFFFFF;">
       <td width="16"></td>
       <td>
-        <h1<?= $page?'':' class="error"'?> style="font-size:2.5rem;font-family:'Source Sans Pro',sans-serif">
+        <h1<?= $page?'':' class="error"'?>>
           <?= $page?$page->review_title()->value():'Page template is empty'; ?>
         </h1>
       </td>
@@ -18,7 +18,7 @@
     <tr style="background-color:#FFFFFF;">
       <td width="16"></td>
       <td>
-        <?= $page?'<h2 style="font-size:1.4rem;font-family:\'Source Sans Pro\',sans-serif;color:#797979;font-weight:300;line-height:1.25;">'.$page->review_subtitle()->value().'</h2>':''; ?>
+        <?= $page?'<h2>'.$page->review_subtitle()->value().'</h2>':''; ?>
       </td>
       <td width="16"></td>
     </tr>

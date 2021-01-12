@@ -1,0 +1,7 @@
+{
+    "name": "ivinteractive/reviews",
+    "type": "library",
+    "require": {
+        "pelago/emogrifier": "^5.0"
+    }
+}

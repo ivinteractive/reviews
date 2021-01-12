@@ -15,10 +15,17 @@ li a {
 }
 h1 {
   /* Mail.ru <h1> styling fix */
-  font-size: 2em;
   line-height: initial;
   margin: 0.67em 0;
   padding: 0;
+  font-family:'Source Sans Pro',sans-serif;
+}
+h2 {
+  font-size:1.4rem;
+  font-family:'Source Sans Pro',sans-serif;
+  color:#797979;
+  font-weight:300;
+  line-height:1.25;
 }
 table {
   /* Null tables spaces */
@@ -134,7 +141,7 @@ table {
 	}
 }
 h1 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 400;
 	margin: 0 0 1rem;
 	color: #000000;
@@ -154,3 +161,5 @@ p {
 .footer a {
 	color: #999999 !important;
 }
+
+body[yahoo] h2 { font-size: 1.4rem; font-family: 'Source Sans Pro', sans-serif; color: #797979; font-weight: 300; line-height: 1.25; }

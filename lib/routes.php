@@ -1,5 +1,6 @@
 <?php
 
+require_once(__DIR__ . DS . '..' . DS . 'vendor' . DS . 'autoload.php');
 require_once(__DIR__ . DS . 'reviewsFunctions.php');
 
 $css = css(c::get('review.assets.css.webfont', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700'));
@@ -296,6 +297,8 @@ kirby()->routes([
 			];
 
 			$content = snippet('reviews-mailer', $mailer_values, true);
+
+			$content = \Pelago\Emogrifier\CssInliner::fromHtml($content)->inlineCss()->render();
 
 			return new Response($content);
 		}
