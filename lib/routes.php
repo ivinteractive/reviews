@@ -300,7 +300,7 @@ kirby()->routes([
 
 			$content = \Pelago\Emogrifier\CssInliner::fromHtml($content)->inlineCss()->render();
 
-			return new Response($content);
+			return new Response(str_replace(['%5Blink_id%5D'], ['[link_id]'], $content));
 		}
 	],
 
